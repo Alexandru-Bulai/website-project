@@ -8,7 +8,7 @@ This project involves creating a responsive website for Pet Care company that fe
 - `how_to.html`: This file, describing the methods on how to care of your pets.
 - `pet_accesories.html`: This file, describing accesories that you can use for your pets.
 - `about.html`: This file, describing the company motivation and goals.
-- `assets/`: Folder containing all static files like images and GIFs.
+- `assets/`: Folder containing git all static files like images and GIFs.
 - `css/`: Contains the CSS file for styling the website.
 - `js/`: (If applicable) JavaScript files for added interactivity.
 - `README.md`: This file, describing the project.
