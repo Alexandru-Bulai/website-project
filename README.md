@@ -5,7 +5,7 @@ This project involves creating a responsive website for Pet Care company that fe
 
 ## Project Structure
 - `index.html`: The main HTML file for the website.
-- `how_to.html`: This file, describing the methods on how to care.
+- `how_to.html`: This file, describing the methods on how to care of your pets.
 - `pet_accesories.html`: This file, describing accesories that you can use for your pets.
 - `about.html`: This file, describing the company motivation and goals.
 - `assets/`: Folder containing all static files like images and GIFs.
