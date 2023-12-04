@@ -1,7 +1,21 @@
 body {
+  display: block;
+  width: 100%;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+}
+
+h1 {
+  flex-grow: 1;
+  font-size: 100px;
+  text-align: center;
+  order: 2;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -18,18 +32,21 @@ body {
   width: 100%;
 }
 
-h1 {
-  flex-grow: 1;
-  font-size: 100px;
-  text-align: center;
-  order: 2;
-  margin: 0;
-}
-
 .menu {
   font-size: 25px;
   display: flex;
   justify-content: space-between;
+}
+
+.menu-elements{
+  color: black;
+  transition: text-decoration 1s;
+}
+
+.menu-elements:hover {
+  text-decoration: underline;
+  text-decoration-skip: 1s;
+  color: brown;
 }
 
 .sandwich-menu {
@@ -46,8 +63,13 @@ h1 {
   border-radius:30px;
 }
 
+.p_title {
+  font-style: italic;
+  font-size: 40px;
+  text-align: center;
+}
+
 .content {
-  width: 1000px;
   text-align: center;
   justify-content: center;
   margin: auto;
@@ -55,4 +77,18 @@ h1 {
   
 .content img {
   width: 100%;
+  }
+
+  .p_intro {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .ordered-list {
+    display: inline-block;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.194);
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
   }
