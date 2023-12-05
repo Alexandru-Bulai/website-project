@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
+  background-color: azure;
 }
 
 h1 {
@@ -49,6 +50,9 @@ a {
   display: flex;
   justify-content: space-around;
   background-color: #f2f2f2;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .company_logo_container {
@@ -102,13 +106,22 @@ a {
   max-width: 800px;
   }
 
-  .p_intro {
+  .intro {
+  width: 90%;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  }
+
+  .p_introduction {
     font-size: 18px;
-    text-align: center;
   }
 
   .ordered-list {
-    display: inline-block;
     text-align: left;
     background-color: rgba(0, 0, 0, 0.194);
     border-width: 2px;
