@@ -8,7 +8,6 @@ h1 {
   flex-grow: 1;
   font-size: 100px;
   text-align: center;
-  order: 2;
   margin: 0;
 }
 
@@ -18,14 +17,14 @@ a {
 }
 
 .body-container {
-  width: 90%;
+  width: 1550px;
   margin: 0 auto;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 90%;
 }
 
 .header {
@@ -89,42 +88,34 @@ a {
   border-radius:30px;
 }
 
-.p_title {
+.home_title {
   font-style: italic;
   font-size: 40px;
   text-align: center;
 }
 
-.content {
+.home_image {
   text-align: center;
   justify-content: center;
   margin: auto;
   }
   
-.content img {
+.home_image img {
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
   }
 
-  .intro {
-  width: 90%;
-  margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  box-sizing: border-box;
-  max-width: 1200px;
+.home_grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 30px;
   }
 
-  .p_introduction {
-    font-size: 18px;
+.grid_item {
+  font-size: 18px;
+  max-width: 250px;
   }
 
-  .ordered-list {
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.194);
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
+.home_grid_item {
+  font-size: 22px;
   }
