@@ -1,0 +1,30 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+}
+
+.grid__box {
+    display: block;
+    font-size: 18px;
+}
+
+.grid__imgContainer {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    padding-left: 60px;
+}  
+
+.grid__imgContainer img {
+    width: 100%;
+}
+
+.grid__boxTitle {
+    display: block;
+    font-size: 22px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
