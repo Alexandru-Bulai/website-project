@@ -1,21 +1,21 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 30px;
-    column-gap: 30px;
+    row-gap: 3rem;
+    column-gap: 3rem;
 }
 
 .grid__box {
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 .grid__imgContainer {
     display: flex;
     align-items: center;
-    width: 150px;
-    height: 150px;
-    padding-left: 60px;
+    width: 15rem;
+    height: 15rem;
+    padding-left: 6rem;
 }  
 
 .grid__imgContainer img {
@@ -24,7 +24,7 @@
 
 .grid__boxTitle {
     display: block;
-    font-size: 22px;
-    padding-top: 15px;
-    padding-bottom: 20px;
+    font-size: 2.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
 }
