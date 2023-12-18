@@ -1,33 +1,33 @@
 .header {
-    display: flex;
-    justify-content: space-between;
+    margin: 0;
     background-color: #f2f2f2;
+}
+
+.header__logoIcon {
+    display: flex;
+    align-items: baseline;
+}
+
+.header__logoIcon img {
+    max-width: 14.3rem;
 }
   
 .header__logoTitle {
+    flex: 1;
     font-family: 'Helvetica', sans-serif;
     font-size: 10rem;
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.header__logoIcon {
-    width: 14.3rem;
-    height: 12.5rem;
-}
-
-.header__logoIcon img {
-    width: 100%;
-}
-
 .sandwich-menu {
-    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 3rem;
     width: 3rem;
-    order: 3;
     margin: 0;
     margin-top: 1rem;
 }
@@ -35,3 +35,29 @@
 .sandwich-menu img {
     width: 100%;
 }
+
+/* Responsive header phone screen */
+@media screen and (max-width: 580px) {
+
+    .header { 
+        justify-content: center;
+    }
+
+    .header__logoIcon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__logoIcon img {
+        max-width: 10rem;
+    }
+
+    .header__logoTitle {
+        display: flex;
+        font-size: 5rem;
+    }
+}
+
+
+
