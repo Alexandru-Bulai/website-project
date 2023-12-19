@@ -22,8 +22,40 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.sandwich-menu {
+.menu {
+    display: none;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    color: black;
+    transition: text-decoration 1s;
+    margin-top: 2rem;
+}
+
+.menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+.menu li:hover {
+    text-decoration: underline;
+    text-decoration-skip: 1s;
+    color: grey;
+}
+
+.sandwich_menu {
     position: absolute;
+    display: none;
     top: 0;
     right: 0;
     height: 3rem;
@@ -32,7 +64,7 @@
     margin-top: 1rem;
 }
 
-.sandwich-menu img {
+.sandwich_menu img {
     width: 100%;
 }
 
@@ -56,6 +88,20 @@
     .header__logoTitle {
         display: flex;
         font-size: 5rem;
+    }
+
+    .sandwich_menu {
+        display: flex;
+    }
+
+    .menu ul {
+        /* display: none; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu.active {
+        display: flex;
     }
 }
 

@@ -18,20 +18,6 @@ a {
     color: inherit;
 }
 
-.menu {
-    font-size: 2.5rem;
-    color: black;
-    transition: text-decoration 1s;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-}
-.menu a:hover {
-    text-decoration: underline;
-    text-decoration-skip: 1s;
-    color: grey;
-}
-
 .home_title {
     font-size: 4rem;
     text-align: center;
