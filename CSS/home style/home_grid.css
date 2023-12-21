@@ -1,0 +1,45 @@
+.grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 25rem 25rem 25rem;
+    grid-gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.grid__box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.grid__imgContainer {
+    max-width: 8rem;
+}  
+
+.grid__imgContainer img {
+    width: 100%;
+}
+
+.grid__boxTitle {
+    font-size: 2.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+/* table size */
+@media screen and ( max-width: 1000px) {
+    .grid {
+        grid-template-columns: 20rem 20rem;
+    }
+} 
+
+/* Responsive header phone screen */
+@media screen and (max-width: 580px) {
+    .grid {
+        grid-template-columns: 25rem;
+    }
+}
+
