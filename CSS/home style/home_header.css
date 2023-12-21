@@ -11,7 +11,7 @@
 .header__logoIcon img {
     max-width: 14.3rem;
 }
-  
+
 .header__logoTitle {
     flex: 1;
     font-family: 'Helvetica', sans-serif;
@@ -23,7 +23,6 @@
 }
 
 .menu {
-    justify-content: space-around;
     font-size: 2.5rem;
     color: black;
     transition: text-decoration 1s;
@@ -34,6 +33,7 @@
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: space-around;
 }
 
 .menu li {
