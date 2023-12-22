@@ -6,8 +6,9 @@ This project involves creating a responsive website for Pet Care company that fe
 ## Setup and Usage
 1. Clone the repository to your local machine.
 2. Open the `home.html` file in a web browser to view the website.
-3. Modify the HTML and CSS files as needed to customize the website.
+3. Modify the HTML, CSS and JavaScript files as needed to customize the website.
 
 ## Technologies Used
 - HTML
 - CSS
+- JavaScript
