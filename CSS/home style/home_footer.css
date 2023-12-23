@@ -46,7 +46,7 @@ hr {
     font-size: 2rem;
     align-items: center;
     color: white;
-    background-color: black;
+    background: transparent;
     border-radius: 50px;
     border-style: solid;
     border-color: white;
