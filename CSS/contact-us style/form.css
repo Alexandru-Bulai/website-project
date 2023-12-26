@@ -5,33 +5,63 @@
     box-sizing: border-box;
 }
 
-.form__container {
+body {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    min-height: 100vh; 
-    background-image: linear-gradient(rgba(0,0,0,0.7), #5064ab);
-    padding-top: 3rem;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 2rem;
 }
 
-#contactUs {
+.form__container {
+    background: #ffffff;
+    padding: 5rem;
+    border-radius: 2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 90%;
-    max-width: 60rem;
+    max-width: 70rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea {
+    border: 0.1rem solid #000000;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 1rem; 
+}
+
+#contactLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactLogo img {
+    max-width: 7.5rem;
+}
+
+#contactLogo p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
 }
 
 .form__inputGroup {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 .form__inputGroup img {
-    max-height: 1rem;
+    max-height: 1.5rem;
 }
 
 label {
-    height: 100%;
+    font-size: 1.5rem;
     padding: 0.5rem 0;
-    color: #000000;
     cursor: text;
 }
 
@@ -39,37 +69,49 @@ input, textarea {
     width: 100%;
     padding: 0.1rem;
     outline: 0;
-    border: 0.1rem solid #fff;
-    color: #fff;
+    border: 0.1rem solid;
     background: transparent;
     font-size: 1.5rem;
 }
 
 button {
-    padding: 1rem 0;
-    color: #fff;
-    outline: none;
-    background: transparent;
-    border: 0.1rem solid #fff;
-    width: 100%;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 1.5rem;
+    padding: 3rem 6rem;
+    border: none;
+    border-radius: 5rem;
+    margin-top: 1rem;
     cursor: pointer;
+    margin: 3rem;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
 }
 
 /* Tablet */
 @media screen and (max-width: 1000px) {
-    form {
-        width: 90%; 
-        max-width: none;
+    button{
+        padding: 1.5rem 2.5rem;
     }
 }
 
 /* Mobile */
 @media screen and (max-width: 580px) {
     .form__container {
-        padding: 2rem; 
+        padding: 2rem;
+        margin: 6rem 2rem;
+        height: 70dvh;
     }
 
     .form__inputGroup {
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    button{
+        font-size: 1rem;
+        padding: 1rem 2rem;
     }
 }
