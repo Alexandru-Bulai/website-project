@@ -42,7 +42,7 @@ hr {
     flex-direction: row;
     font-size: 2rem;
     color: white;
-    background-color: black;
+    background: transparent;
     border-radius: 50px;
     border-style: solid;
     border-color: white;
