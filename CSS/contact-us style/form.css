@@ -43,7 +43,6 @@ textarea {
 }
 
 #contactLogo p {
-    font-family: 'Helvetica', sans-serif;
     font-size: 3rem;
     font-weight: bold;
     color: #333;
@@ -51,7 +50,9 @@ textarea {
 }
 
 .form__inputGroup {
+    font-family: 'Helvetica', sans-serif;
     padding-bottom: 2rem;
+    position: relative;
 }
 
 .form__inputGroup img {
@@ -59,9 +60,19 @@ textarea {
 }
 
 label {
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
-    padding: 0.5rem 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1rem;
     cursor: text;
+}
+
+label img {
+    margin-right: 1rem;
 }
 
 input, textarea {
