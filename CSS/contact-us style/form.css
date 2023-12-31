@@ -22,16 +22,6 @@ body {
     max-width: 70rem;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-textarea {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 1rem; 
-}
-
 #contactLogo {
     display: flex;
     flex-direction: column;
@@ -69,6 +59,7 @@ label {
     top: 0;
     padding: 1rem;
     cursor: text;
+    transition: 0.2s;
 }
 
 label img {
@@ -77,7 +68,7 @@ label img {
 
 input, textarea {
     width: 100%;
-    padding: 0.1rem;
+    padding: 1rem;
     outline: 0;
     border: 0.1rem solid;
     background: transparent;
@@ -98,6 +89,14 @@ button {
 #buttons {
     display: flex;
     justify-content: center;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -2.8rem;
+    font-size: 1rem;
 }
 
 /* Tablet */
