@@ -1,6 +1,6 @@
-const sandwich_menu = document.querySelector(".sandwich_menu");
-const menu = document.querySelector(".menu");
+const nav_button = document.getElementById("nav_button");
+const nav_bar = document.getElementById("nav_bar");
 
-sandwich_menu.addEventListener('click', () => {
-    menu.classList.toggle('active')
-})
+nav_button.addEventListener('click', () => {
+    nav_bar.classList.toggle('hidden');
+});
