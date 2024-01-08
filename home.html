@@ -4,49 +4,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Pet Care</title>
-</>
 
 <body class="">
     <div class="bg-gray-200">
-        <div class="flex 
-                    justify-center 
-                    text-center 
-                    flex-col">
+        <div class="flex justify-center text-center flex-col">
             <img class="h-24 sm:h-40 lg:h-44" src="/Assets/images/home-logo/company_logo.svg" alt="Company Logo" />
-            <h1 class="font-bold 
-                        text-center 
-                        text-gray-700 
-                        text-7xl
-                        sm:text-8xl
-                        lg:text-9xl"
+            <h1 class="font-bold text-center text-gray-700 text-7xl sm:text-8xl lg:text-9xl"
                 style="font-family: 'Helvetica', sans-serif; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
                 Pet Care</h1>
         </div>
-
-        <button id="nav_button" class="absolute 
-                                        top-0 
-                                        right-1 
-                                        h-12 
-                                        w-12 
-                                        mt-4 
-                                        sm:hidden">
+        <button id="nav_button" class="absolute top-0 right-1 h-12 w-12 mt-4 sm:hidden">
             <img src="/Assets/images/home-logo/cat-logo.svg" alt="cat stamp" />
         </button>
-        <nav id="nav_bar" class="
-                                hidden 
-                                active:flex 
-                                flex-col 
-                                items-center 
-                                text-center
-                                gap
-                                p-4 
-                                text-black 
-                                text-3xl
-                                sm:flex
-                                sm:flex-row
-                                sm:justify-between
-                                lg:text-4xl
-                                ">
+        <nav id="nav_bar" class="hidden active:flex flex-col items-center text-center
+p-4 text-black text-3xl sm:flex sm:flex-row sm:justify-between lg:text-4xl ">
                     <a href="home.html" class="block px-4 py-2 hover:underline hover:text-gray-500"><strong>Home</strong></a>
                     <a href="pet_accesories.html" class="block px-4 py-2 hover:underline hover:text-gray-500"><strong>Accessories</strong></a>
                     <a href="how_to.html" class="block px-4 py-2 hover:underline hover:text-gray-500"><strong>How to</strong></a>
@@ -140,72 +111,50 @@
         </div>
     </div>
 
-    <div class="footer">
-        <div class="footer__top">
-            <div class="footer__logo">
-                <img src="/Assets/images/home-footer/logo_footer.svg" alt="Company logo" />
-                <p>Pet Care</p>
+    <div class=" bg-black text-white items-center">
+        <div class="flex flex-col items-center py-4 lg:flex-row lg:justify-between lg:mx-12">
+            <div class="flex flex-col justify-center items-center lg:flex-row lg:items-baseline">
+                <img class="w-16 lg:w-24" src="/Assets/images/home-footer/logo_footer.svg" alt="Company logo" />
+                <p class="text-4xl lg:text-7xl mx-5">Pet Care</p>
             </div>
-
-            <div class="footer__location">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 546 546" width="546px" height="546px"
-                    style="
-                shape-rendering: geometricPrecision;
-                text-rendering: geometricPrecision;
-                image-rendering: optimizeQuality;
-                fill-rule: evenodd;
-                clip-rule: evenodd;
-            " xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g>
-                        <path style="opacity: 0.989" fill="#000000"
-                            d="M 248.5,-0.5 C 264.5,-0.5 280.5,-0.5 296.5,-0.5C 383.426,9.21019 451.926,49.8769 502,121.5C 520.67,151.172 533.67,183.172 541,217.5C 542.693,227.951 544.193,238.284 545.5,248.5C 545.5,264.5 545.5,280.5 545.5,296.5C 535.79,383.426 495.123,451.926 423.5,502C 393.828,520.67 361.828,533.67 327.5,541C 317.049,542.693 306.716,544.193 296.5,545.5C 280.5,545.5 264.5,545.5 248.5,545.5C 161.574,535.79 93.0735,495.123 43,423.5C 18.0206,384.728 3.52063,342.395 -0.5,296.5C -0.5,280.5 -0.5,264.5 -0.5,248.5C 9.21019,161.574 49.8769,93.0735 121.5,43C 160.272,18.0206 202.605,3.52063 248.5,-0.5 Z" />
-                    </g>
-                    <g>
-                        <path style="opacity: 0.993" fill="#fcfcfc"
-                            d="M 256.5,83.5 C 287.231,80.9538 316.231,86.7871 343.5,101C 378.731,124.258 398.565,157.092 403,199.5C 405.039,221.892 402.039,243.559 394,264.5C 376.874,305.763 355.874,344.763 331,381.5C 313.443,407.723 295.109,433.39 276,458.5C 274.267,460.602 272.267,460.935 270,459.5C 236.112,416.075 205.445,370.409 178,322.5C 164.871,299.242 154.204,274.908 146,249.5C 135.579,205.941 143.246,165.941 169,129.5C 191.968,102.432 221.134,87.0989 256.5,83.5 Z" />
-                    </g>
-                    <g>
-                        <path style="opacity: 1" fill="#010101"
-                            d="M 250.5,121.5 C 264.837,121.333 279.171,121.5 293.5,122C 335.57,131.41 359.736,157.577 366,200.5C 366.785,211.536 366.452,222.536 365,233.5C 356.677,260.48 345.344,286.147 331,310.5C 313.475,341.573 293.975,371.24 272.5,399.5C 236.985,353.509 207.819,303.509 185,249.5C 173.988,216.922 177.322,185.922 195,156.5C 209.279,138.038 227.779,126.371 250.5,121.5 Z" />
-                    </g>
-                    <g>
-                        <path style="opacity: 0.992" fill="#fdfdfd"
-                            d="M 261.5,177.5 C 288.309,174.147 306.143,185.147 315,210.5C 317.808,238.008 305.974,255.508 279.5,263C 253.338,265.148 236.838,253.648 230,228.5C 227.311,203.189 237.811,186.189 261.5,177.5 Z" />
-                    </g>
+            <div class="flex bg-black text-white items-center border-2 rounded-full border-white p-3 mt-4 lg:text-3xl">
+                <svg class= "lg:w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                 </svg>
                 <p>United Kingdom</p>
             </div>
         </div>
-        <hr />
-        <div class="footer__bottom">
+        <hr class = "border w-9/12 my-3 border-white mx-auto md:w-11/12"/>
+        <div class="flex flex-col text-center justify-center lg:flex-row lg:justify-start lg:text-start lg:mx-12 ">
             <div>
-                <p>About us</p>
-                <a href="#">Our company</a>
+                <p class="font-extrabold text-xl my-2 lg:text-3xl ">About us</p>
+                <a class="text-2xl" href="#">Our company</a>
             </div>
-            <div>
-                <p>Do you need help?</p>
-                <a href="contact-us.html">Contact us</a>
+            <div class="lg:mx-10">
+                <p class="font-extrabold text-xl my-2 lg:text-3xl">Do you need help?</p>
+                <a class="text-2xl" href="contact-us.html">Contact us</a>
             </div>
         </div>
-        <hr />
-        <div class="footer__socialMedia">
-            <div>
+        <hr class = "border w-9/12 my-3 border-white mx-auto lg:w-11/12"/>
+        <div class="lg:flex justify-between">
+            <div class="hidden lg:flex lg:items-center lg:mx-12">
                 <p>© 2023. Pet Care S.R.L.</p>
             </div>
-            <div>
-                <div>
+            <div class="flex justify-center lg:mx-12">
+                <div class="mx-4">
                     <a href="https://www.facebook.com/">
                         <img src="/Assets/images/home-footer/facebook_footer.svg" alt="Facebook icon"
                             title="Get me to Facebook" />
                     </a>
                 </div>
-                <div>
+                <div class="mx-4">
                     <a href="https://www.instagram.com/">
                         <img src="/Assets/images/home-footer/instagram_footer.svg" alt="Instagram icon"
                             title="Get me to Instagram" />
                     </a>
                 </div>
-                <div>
+                <div class="mx-4">
                     <a href="https://www.youtube.com/">
                         <img src="/Assets/images/home-footer/youtube_footer.svg" alt="Youtube icon"
                             title="Get me to Youtube" />
