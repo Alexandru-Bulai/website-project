@@ -19,9 +19,7 @@ const findState = () => {
 
 		fetch(locationApi)
 		.then(response => response.json())
-		.then(data => {
-			location.textContent = data.principalSubdivision;
-		})
+		.then(data => {location.textContent = data.principalSubdivision;})
 	}
 
 	const deny = () => {
