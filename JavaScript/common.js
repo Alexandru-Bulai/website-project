@@ -37,10 +37,15 @@ const findMyLocation = () => {
 	}
 
 	const deny = () => {
-		location.textContent = "Location permission denied. Unable to retrieve location.";
+		location.textContent = "Permission denied.";
 	}
 
 	navigator.geolocation.getCurrentPosition(allow, deny);
 }
 
-window.addEventListener('load', findMyLocation);
+const locationButton = document.getElementById("location-button");
+if (locationButton) {
+	locationButton.addEventListener('click', findMyLocation);
+} else {
+	console.error("The location button could not be found on the page.");
+}
