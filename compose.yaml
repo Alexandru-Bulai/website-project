@@ -1,0 +1,7 @@
+---
+services:
+  web:
+    build: .
+    container_name: "website-project-app"
+    ports: 
+      - "8081:80"
