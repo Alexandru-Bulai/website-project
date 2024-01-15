@@ -1,6 +1,6 @@
-const nav_button = document.getElementById("nav_button");
-const nav_bar = document.getElementById("nav_bar");
+const navButton = document.getElementById('nav_button')
+const navBar = document.getElementById('nav_bar')
 
-nav_button.addEventListener('click', () => {
-    nav_bar.classList.toggle('hidden');
-});
+navButton.addEventListener('click', () => {
+  navBar.classList.toggle('hidden')
+})
