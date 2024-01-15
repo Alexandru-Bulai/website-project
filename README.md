@@ -9,10 +9,10 @@ This project involves creating a responsive website for Pet Care company that fe
 2. Open the `home.html` file in a web browser to view the website (i recommend live server extension).
 3. You are all set up to edit the webpage! Enjoy 😄
 
-## Framework used:
+## Framework used
 - TailWind CSS
 
-## Technologies Used
+## Technologies used
 - HTML
 - CSS
 - JavaScript
