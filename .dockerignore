@@ -2,9 +2,6 @@
 *
 
 # Whitelist method
-!Dockerfile
-!compose.yaml
-!/Assets
-!/JavaScript
+!src/
+!build/
 !*.html
-!*.md
