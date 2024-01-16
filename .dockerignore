@@ -1,7 +1,7 @@
 # Ignore everything
 *
 
-# White list method
+# Whitelist method
 !Dockerfile
 !compose.yaml
 !/Assets
