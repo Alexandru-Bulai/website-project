@@ -1,4 +1,10 @@
-.github
-.vscode
-Dockerfile
-compose.yaml
+# Ignore everything
+*
+
+# White list method
+!Dockerfile
+!compose.yaml
+!/Assets
+!/JavaScript
+!*.html
+!*.md
