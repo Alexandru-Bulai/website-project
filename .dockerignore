@@ -1,0 +1,4 @@
+.github
+.vscode
+Dockerfile
+compose.yaml
