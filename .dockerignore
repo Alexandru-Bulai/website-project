@@ -1,7 +1,0 @@
-# Ignore everything
-*
-
-# Whitelist method
-!src/
-!build/
-!*.html
