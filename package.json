@@ -1,7 +1,7 @@
 {
   "name": "website-project",
   "version": "1.0.0",
-  "description": "[![Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)",
+  "description": "A comprehensive pet care platform offering scheduling for grooming, veterinary appointments, and community support.",
   "main": "index.js",
   "directories": {
     "test": "test"

@@ -13,11 +13,10 @@ This project involves creating a responsive website for Pet Care company that fe
 3. Visit `http://localhost:8081/home.html`.
 4. You are all set up to edit the webpage! Enjoy 😄
 
-## Setup testing enviroment (optional)
-1. Run `npm init -y` to initialize default value.
-2. Install jest with `npm --save-dev jest`.
-3. Modify package.json, `script:{"test" : "jest --coverage"}`.
-4. You are ready to go, if you have any issue you can follow this guide (`https://www.youtube.com/watch?v=FgnxcUQ5vho&t=192s`).
+## Testing enviroment (optional)
+1) In the Test folder you can find the tests runned on JavaScript and you can add more tests there.
+2) Once you finished writing the test simply rum `npm test` on the command line to see if it works.
+3) If you have any issue you can follow this guide (`https://www.youtube.com/watch?v=FgnxcUQ5vho&t=192s`).
 
 ## Framework used
 
