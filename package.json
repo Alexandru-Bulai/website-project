@@ -1,0 +1,18 @@
+{
+  "name": "website-project",
+  "version": "1.0.0",
+  "description": "A comprehensive pet care platform offering scheduling for grooming, veterinary appointments, and community support.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
