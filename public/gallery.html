@@ -7,6 +7,7 @@
 	</head>
 <body class="bg-blue-50">
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Menu beginning -->
 <div class="flex flex-col bg-indigo-100 my-8 mx-8 md:flex-row md:justify-around md:mx-3">
 	<div class="flex items-center justify-center">
 		<img class="w-6 h-6" src="Assets/images/gallery/black_heart_border.svg" alt="black heart">
@@ -14,15 +15,86 @@
 	</div>
 	<div class="flex flex-1 flex-col justify-center text-center md:flex-row md:justify-around md:items-center">
 		<div>
+<!-- Filters button -->
 			<button class="text-center text-purple-600 font-bold text-xl px-4 my-3 rounded-full border-4 border-purple-400 hover:bg-indigo-400 hover:text-white hover:border-purple-600">Filters</button>
 		</div>
+<!-- Animal filter options button -->
+	<div class="flex flex-col  flex-1 bg-blue-300 py-5">
+		<div class="m-auto p-2 rounded-full ring-4 text-xl font-bold text-blue-400 bg-blue-800 hover:text-white hover:bg-blue-300">animals</div>
+		<div class="flex">
+			<button class="flex flex-1 justify-center">
+				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
+					<img src="Assets/images/gallery/filter/dog.svg" alt="dog">
+				</div>
+				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
+					<img src="Assets/images/gallery/filter/cat.svg" alt="cat">
+				</div>
+				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
+					<img src="Assets/images/gallery/filter/fox.svg" alt="fox">
+				</div>
+				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
+					<img src="Assets/images/gallery/filter/parrot.svg" alt="parrot">
+				</div>
+			</button>
+		</div>
+<!-- Gender filter option -->
+		<div class="flex justify-center">
+				<form class="flex bg-blue-300">
+					<label class=""><em>Gender</em></label>
+					<label class="mx-2" for="male">M</label>
+					<input type="radio" name="gender" id="male" value="M">
+					<label class="mx-2" for="female">F</label>
+					<input type="radio" name="gender" id="female" value="F">
+				</form>
+			</div>
+<!-- Rating filters option -->
+		<style>
+			.star-rating label {
+				cursor: pointer;
+				font-size:2rem;
+			}
+
+			.star-rating label::before {
+				content: '☆';
+				color: #17488d;
+			}
+
+			.star-rating input[type="radio"] {
+				display: none;
+			}
+
+			.star-rating input[type="radio"]:checked~label::before,
+			.star-rating label:hover::before,
+			.star-rating label:hover~label::before {
+				content: '★';
+				color: #5604e3;
+			}
+		</style>
+
+		<div class="flex flex-col justify-center">
+			<label class="text-lg font-semibold mb-2">Rating</label>
+			<div class="star-rating">
+				<input type="radio" name="rate" id="rate-5" class="hidden">
+				<label for="rate-5" class="hover:text-yellow-500"></label>
+				<input type="radio" name="rate" id="rate-4" class="hidden">
+				<label for="rate-4" class="hover:text-yellow-500"></label>
+				<input type="radio" name="rate" id="rate-3" class="hidden">
+				<label for="rate-3" class="hover:text-yellow-500"></label>
+				<input type="radio" name="rate" id="rate-2" class="hidden">
+				<label for="rate-2" class="hover:text-yellow-500"></label>
+				<input type="radio" name="rate" id="rate-1" class="hidden">
+				<label for="rate-1" class="hover:text-yellow-500"></label>
+			</div>
+		</div>
+	</div>
+<!-- Animal selection menu -->
 		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Dog</div>
 		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Cat</div>
 		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Fox</div>
 		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Parrot</div>
 	</div>
 </div>
-
+<!-- Menu end -->
 <div>
 	<img class="" src="Assets/images/gallery/percare_gallery_hero.png" alt="">
 </div>
