@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="m-auto max-w-screen-2xl">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,50 +8,64 @@
 <body class="bg-blue-50">
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- Menu beginning -->
-<div class="flex flex-col bg-indigo-100 my-8 mx-8 md:flex-row md:justify-around md:mx-3">
+<div class="flex flex-col bg-indigo-100 my-8 md:flex-row max-m-xl">
 	<div class="flex items-center justify-center">
 		<img class="w-6 h-6" src="Assets/images/gallery/black_heart_border.svg" alt="black heart">
 		<p class="text-xl font-extrabold text-indigo-400"><em>Gallery</em></p>
 	</div>
-	<div class="flex flex-1 flex-col justify-center text-center md:flex-row md:justify-around md:items-center">
-		<div>
+
 <!-- Filters button -->
-			<button class="text-center text-purple-600 font-bold text-xl px-4 my-3 rounded-full border-4 border-purple-400 hover:bg-indigo-400 hover:text-white hover:border-purple-600">Filters</button>
-		</div>
+	<div id="filtersButton" class="flex text-center m-auto md:m-0">
+		<button  class="text-purple-600 font-bold text-xl px-4 my-3 rounded-full border-4 border-purple-400 hover:bg-indigo-400 hover:text-white hover:border-purple-600 md:hidden md:mx-10" >Filters</button>
+	</div>
+	<div id="closeFilters" class="hidden text-center md:hidden">
+		<button class="text-purple-600 font-extrabold text-xl px-2 my-3 rounded-full border-4 border-purple-400 hover:bg-indigo-400 hover:text-white hover:border-purple-600">X</button>
+	</div>
+
+<!-- Filters container -->
+<div id="filtersMenu" class="hidden flex-col justify-center bg-blue-300 rounded-2xl text-center md:flex md:flex-row md:flex-1 md:justify-around md:items-center md:ml-5">
+
 <!-- Animal filter options button -->
-	<div class="flex flex-col  flex-1 bg-blue-300 py-5">
-		<div class="m-auto p-2 rounded-full ring-4 text-xl font-bold text-blue-400 bg-blue-800 hover:text-white hover:bg-blue-300">animals</div>
-		<div class="flex">
-			<button class="flex flex-1 justify-center">
-				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
-					<img src="Assets/images/gallery/filter/dog.svg" alt="dog">
+		<div class="flex flex-col py-5">
+			<button id="animalsFilterButton" class="p-2 rounded-full ring-4 text-xl font-bold text-blue-400 bg-blue-800 hover:text-white hover:bg-blue-300 md:ml-4 md:hidden">Animal</button>
+			<div id="singleAnimalFilter" class="hidden md:flex">
+				<div class="flex justify-center">
+					<div class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+						<img src="Assets/images/gallery/filter/dog.svg" alt="dog">
+					</div>
+					<div class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+						<img src="Assets/images/gallery/filter/cat.svg" alt="cat">
+					</div>
+					<div class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+						<img src="Assets/images/gallery/filter/fox.svg" alt="fox">
+					</div>
+					<div class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+						<img src="Assets/images/gallery/filter/parrot.svg" alt="parrot">
+					</div>
 				</div>
-				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
-					<img src="Assets/images/gallery/filter/cat.svg" alt="cat">
-				</div>
-				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
-					<img src="Assets/images/gallery/filter/fox.svg" alt="fox">
-				</div>
-				<div class="bg-blue-300 rounded-full my-6 mx-4 p-2 ring-4 hover:bg-indigo-400">
-					<img src="Assets/images/gallery/filter/parrot.svg" alt="parrot">
-				</div>
-			</button>
+			</div>
 		</div>
+
 <!-- Gender filter option -->
-		<div class="flex justify-center">
-				<form class="flex bg-blue-300">
-					<label class=""><em>Gender</em></label>
+		<div class="flex justify-center mb-4 mt-2">
+			<form class="flex md:flex-col lg:flex-row">
+				<label class="t"><strong><em>Gender:</em></strong></label>
+				<div class="flex">
 					<label class="mx-2" for="male">M</label>
 					<input type="radio" name="gender" id="male" value="M">
+				</div>
+				<div class="flex">
 					<label class="mx-2" for="female">F</label>
 					<input type="radio" name="gender" id="female" value="F">
-				</form>
-			</div>
+				</div>
+			</form>
+		</div>
+
 <!-- Rating filters option -->
 		<style>
 			.star-rating label {
 				cursor: pointer;
-				font-size:2rem;
+				font-size: 2rem;
 			}
 
 			.star-rating label::before {
@@ -71,32 +85,34 @@
 			}
 		</style>
 
-		<div class="flex flex-col justify-center">
-			<label class="text-lg font-semibold mb-2">Rating</label>
-			<div class="star-rating">
-				<input type="radio" name="rate" id="rate-5" class="hidden">
-				<label for="rate-5" class="hover:text-yellow-500"></label>
-				<input type="radio" name="rate" id="rate-4" class="hidden">
-				<label for="rate-4" class="hover:text-yellow-500"></label>
-				<input type="radio" name="rate" id="rate-3" class="hidden">
-				<label for="rate-3" class="hover:text-yellow-500"></label>
-				<input type="radio" name="rate" id="rate-2" class="hidden">
-				<label for="rate-2" class="hover:text-yellow-500"></label>
-				<input type="radio" name="rate" id="rate-1" class="hidden">
-				<label for="rate-1" class="hover:text-yellow-500"></label>
+		<div class="md:flex">
+			<div class="flex flex-col justify-center">
+				<label class="text-lg font-semibold">Rating</label>
+				<div class="star-rating mb-3">
+					<input type="radio" name="rate" id="rate-5">
+					<label for="rate-5"></label>
+					<input type="radio" name="rate" id="rate-4">
+					<label for="rate-4"></label>
+					<input type="radio" name="rate" id="rate-3">
+					<label for="rate-3"></label>
+					<input type="radio" name="rate" id="rate-2">
+					<label for="rate-2"></label>
+					<input type="radio" name="rate" id="rate-1">
+					<label for="rate-1"></label>
+				</div>
 			</div>
 		</div>
+		<div class="flex justify-center md:mr-3">
+			<button class="bg-black text-white text-lg ring-2 py-1 px-4 rounded-lg self-center" type="submit"><strong>Apply</strong></button>
+		</div>
 	</div>
-<!-- Animal selection menu -->
-		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Dog</div>
-		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Cat</div>
-		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Fox</div>
-		<div class="text-2xl font-bold my-3 text-blue-400 hover:underline hover:cursor-pointer hover:text-blue-600">Parrot</div>
-	</div>
+<!-- End filters container -->
 </div>
 <!-- Menu end -->
 <div>
-	<img class="" src="Assets/images/gallery/percare_gallery_hero.png" alt="">
+	<img  src="Assets/images/gallery/percare_gallery_hero.png" alt="Animals posing in a art gallery">
 </div>
+
+<script src="JavaScript/common.js"></script>
 </body>
 </html>
