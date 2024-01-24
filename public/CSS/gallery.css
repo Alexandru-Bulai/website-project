@@ -1,4 +1,3 @@
-<style>
 	.star-rating label {
 		cursor: pointer;
 		font-size: 2rem;
@@ -45,5 +44,3 @@
 	.imageHoverContainer:hover .statsBox {
 		opacity: 1;
 	}
-
-</style>
