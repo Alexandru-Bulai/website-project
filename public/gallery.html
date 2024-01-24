@@ -4,58 +4,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Pet Gallery</title>
+		<link rel="stylesheet" href="CSS/gallery.css">
 	</head>
 <body class="bg-blue-50">
 <script src="https://cdn.tailwindcss.com"></script>
-<style>
-	.star-rating label {
-		cursor: pointer;
-		font-size: 2rem;
-	}
 
-	.star-rating label::before {
-		content: '☆';
-		color: #17488d;
-	}
-
-	.star-rating input[type="radio"] {
-		display: none;
-	}
-
-	.star-rating input[type="radio"]:checked~label::before,
-	.star-rating label:hover::before,
-	.star-rating label:hover~label::before {
-		content: '★';
-		color: #5604e3;
-	}
-
-	#backgroundImg {
-    background-image: url(Assets/images/gallery/percare_gallery_hero.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow-y: auto;
-    height: 100vh;
-    width: 100%;
-    padding: 1rem;
-	}
-
-	#imgContainer {
-    max-width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-	.imageHoverContainer .statsBox {
-		position: absolute;
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
-
-	.imageHoverContainer:hover .statsBox {
-		opacity: 1;
-	}
-
-</style>
 <!-- Menu beginning -->
 <div class="flex flex-col bg-indigo-100 my-8 md:flex-row max-m-xl">
 	<div class="flex items-center justify-center">
@@ -137,13 +90,13 @@
 
 <!-- Menu end -->
 
-<!-- Grid section -->
+<!-- Gallery section -->
 <div id="backgroundImg">
 
-<!-- Grid container start -->
+<!-- Images gallery container start -->
 	<div class="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="imgContainer">
-		<!-- Grid box container -->
-		<div class="imageHoverContainer relative">
+		<!-- Image card container -->
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/dog-1.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -151,7 +104,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/cat-1.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -159,7 +112,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/fox-1.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -167,7 +120,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/parrot-1.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -175,7 +128,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/dog-2.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -183,7 +136,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/cat-2.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -191,7 +144,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/fox-2.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -199,7 +152,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/parrot-2.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -207,7 +160,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/dog-3.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -215,7 +168,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/cat-3.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -223,7 +176,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/fox-3.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -231,7 +184,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/parrot-3.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -239,7 +192,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/dog-4.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -247,7 +200,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/cat-4.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -255,7 +208,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/fox-4.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -263,7 +216,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/parrot-4.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -271,7 +224,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/dog-5.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -279,7 +232,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/cat-5.png" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -287,7 +240,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/fox-5.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: female</div>
@@ -295,7 +248,7 @@
 			</div>
 		</div>
 
-		<div class="imageHoverContainer relative">
+		<div class="galleryItems relative">
 			<img src="Assets/images/gallery/gallery_grid/parrot-5.jpeg" alt="dog portrait">
 			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 				<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -305,7 +258,7 @@
 
 	</div>
 </div>
-<!-- End grid -->
+<!-- Images gallery container end -->
 
 <script src="JavaScript/common.js"></script>
 </body>

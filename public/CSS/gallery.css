@@ -1,0 +1,49 @@
+<style>
+	.star-rating label {
+		cursor: pointer;
+		font-size: 2rem;
+	}
+
+	.star-rating label::before {
+		content: '☆';
+		color: #17488d;
+	}
+
+	.star-rating input[type="radio"] {
+		display: none;
+	}
+
+	.star-rating input[type="radio"]:checked~label::before,
+	.star-rating label:hover::before,
+	.star-rating label:hover~label::before {
+		content: '★';
+		color: #5604e3;
+	}
+
+	#backgroundImg {
+    background-image: url(../Assets/images/gallery/petcare_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+    height: 100vh;
+    width: 100%;
+    padding: 1rem;
+	}
+
+	#imgContainer {
+    max-width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+	.imageHoverContainer .statsBox {
+		position: absolute;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.imageHoverContainer:hover .statsBox {
+		opacity: 1;
+	}
+
+</style>
