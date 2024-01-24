@@ -12,9 +12,9 @@
 	display: none;
 }
 
-.star-rating input[type="radio"]:checked ~ label::before,
 .star-rating label:hover::before,
-.star-rating label:hover ~ label::before {
+.star-rating label:hover ~ label::before,
+.star-rating input[type="radio"]:checked ~ label::before {
 	content: '★';
 	color: #5604e3;
 }
