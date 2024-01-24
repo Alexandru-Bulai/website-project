@@ -7,6 +7,47 @@
 	</head>
 <body class="bg-blue-50">
 <script src="https://cdn.tailwindcss.com"></script>
+<style>
+	.star-rating label {
+		cursor: pointer;
+		font-size: 2rem;
+	}
+
+	.star-rating label::before {
+		content: '☆';
+		color: #17488d;
+	}
+
+	.star-rating input[type="radio"] {
+		display: none;
+	}
+
+	.star-rating input[type="radio"]:checked~label::before,
+	.star-rating label:hover::before,
+	.star-rating label:hover~label::before {
+		content: '★';
+		color: #5604e3;
+	}
+
+	#gridBackground {
+    background-image: url(Assets/images/gallery/percare_gallery_hero.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 12rem;
+    padding-left: 3rem;
+	}
+
+	.imageHoverContainer .statsBox {
+			position: absolute;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+	}
+
+	.imageHoverContainer:hover .statsBox {
+			opacity: 1;
+	}
+
+</style>
 <!-- Menu beginning -->
 <div class="flex flex-col bg-indigo-100 my-8 md:flex-row max-m-xl">
 	<div class="flex items-center justify-center">
@@ -62,29 +103,6 @@
 		</div>
 
 <!-- Rating filters option -->
-		<style>
-			.star-rating label {
-				cursor: pointer;
-				font-size: 2rem;
-			}
-
-			.star-rating label::before {
-				content: '☆';
-				color: #17488d;
-			}
-
-			.star-rating input[type="radio"] {
-				display: none;
-			}
-
-			.star-rating input[type="radio"]:checked~label::before,
-			.star-rating label:hover::before,
-			.star-rating label:hover~label::before {
-				content: '★';
-				color: #5604e3;
-			}
-		</style>
-
 		<div class="md:flex">
 			<div class="flex flex-col justify-center">
 				<label class="text-lg font-semibold">Rating</label>
@@ -106,12 +124,28 @@
 			<button class="bg-black text-white text-lg ring-2 py-1 px-4 rounded-lg self-center" type="submit"><strong>Apply</strong></button>
 		</div>
 	</div>
+</div>
 <!-- End filters container -->
-</div>
+
 <!-- Menu end -->
-<div>
-	<img  src="Assets/images/gallery/percare_gallery_hero.png" alt="Animals posing in a art gallery">
+
+<!-- Grid section -->
+
+<!-- Grid container start -->
+<div id="gridBackground">
+	<div class="w-full h-full grid grid-cols-3 grid-rows-3 gap-4" id="gridContainer">
+		<!-- Grid box container -->
+		<div class="imageHoverContainer relative">
+			<img src="Assets/images/gallery/gallery_grid/dog-1.png" alt="dog portrait">
+			<div class="statsBox flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
+				<div class="text-15 font-bold text-blue-800">Gender: male</div>
+				<div class="text-15 font-bold text-blue-800">Rating: 4☆</div>
+			</div>
+		</div>
+
+	</div>
 </div>
+<!-- End grid -->
 
 <script src="JavaScript/common.js"></script>
 </body>
