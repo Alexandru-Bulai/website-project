@@ -19,7 +19,7 @@
 		color: #5604e3;
 	}
 
-	#backgroundImg {
+	#background-img {
     background-image: url(../Assets/images/gallery/petcare_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,18 +29,18 @@
     padding: 1rem;
 	}
 
-	#imgContainer {
+	#img-container {
     max-width: 100%;
     padding: 1rem;
     box-sizing: border-box;
 }
 
-	.imageHoverContainer .statsBox {
+	.gallery-items .stats-box {
 		position: absolute;
 		opacity: 0;
 		transition: opacity 0.3s ease;
 	}
 
-	.imageHoverContainer:hover .statsBox {
+	.gallery-items:hover .stats-box {
 		opacity: 1;
 	}
