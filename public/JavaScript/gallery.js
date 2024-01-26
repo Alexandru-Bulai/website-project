@@ -1,12 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Object mapping animal types to their respective classes
-  const animals = {
-    dogs: '.dog',
-    cats: '.cat',
-    foxes: '.fox',
-    parrots: '.parrot'
-  }
-
   let selectedAnimalType = null
 
   // Function to hide all gallery items
@@ -19,22 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const showSelectedAnimals = () => {
     hideAllAnimals()
     if (selectedAnimalType) {
-      document.querySelectorAll(`${selectedAnimalType} .gallery-items`).forEach(item => {
+      document.querySelectorAll(`.gallery-items[data-animal-type="${selectedAnimalType}"]`).forEach(item => {
         item.style.display = 'block'
       })
     }
   }
-
-  // Update the selectedAnimalType based on user click
-  Object.keys(animals).forEach(key => {
-    document.querySelectorAll(animals[key]).forEach(element => {
-      element.addEventListener('click', () => {
-        selectedAnimalType = animals[key]
-        console.log(`Selected animal type: ${key}`)
-      })
+  //
+  document.querySelectorAll('[data-animal-type]').forEach(filterOption => {
+    filterOption.addEventListener('click', () => {
+      selectedAnimalType = filterOption.dataset.animalType
+      console.log(`Selected animal type: ${selectedAnimalType}`)
     })
   })
-
   // Apply button functionality
   const applyFilters = document.querySelector('#apply-filters')
   if (applyFilters) {
