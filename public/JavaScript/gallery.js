@@ -1,38 +1,45 @@
-const animalSelector = () => {
+document.addEventListener('DOMContentLoaded', () => {
+	// Object mapping animal types to their respective classes
 	const animals = {
-		dogs: document.querySelectorAll('.dog'),
-		cats: document.querySelectorAll('.cat'),
-		foxes: document.querySelectorAll('.fox'),
-		parrots: document.querySelectorAll('.parrot')
+		dogs: '.dog',
+		cats: '.cat',
+		foxes: '.fox',
+		parrots: '.parrot'
 	};
 
-	for (let animalKey of Object.keys(animals)) {
-		if (animals[animalKey].length > 0) {
-			return animals[animalKey];
-		} else {
-			console.log('Animal not found');
+	let selectedAnimalType = null;
+
+	// Function to hide all gallery items
+	const hideAllAnimals = () => {
+		document.querySelectorAll('.gallery-items').forEach(item => {
+			item.style.display = 'none';
+		});
+	};
+	// Function to display selected animal
+	const showSelectedAnimals = () => {
+		hideAllAnimals();
+		if (selectedAnimalType) {
+			document.querySelectorAll(`${selectedAnimalType} .gallery-items`).forEach(item => {
+				item.style.display = 'block';
+			});
 		}
 	};
-};
 
-document.addEventListener('DOMContentLoaded', () => {
-	const hideAllAnimals = () => {
-		document.querySelector('.gallery-items').forEach(item => {
-			item.style.display = 'none';
-		})
-	};
-
-	const showAnimals = (animalClass) => {
-		hideAllAnimals();
-		document.querySelectorAll(animalClass).forEach(animal => {
-			animal.style.display = 'flex';
-		});
-	};
-
-	document.querySelectorAll('#singleAnimalFilter div').forEach(filter => {
-		filter.addEventListener('click', (event) => {
-			const animalType = event.currentTarget.classList[0];
-			showAnimals(`.${animalType}`);
+	// Update the selectedAnimalType based on user click
+	Object.keys(animals).forEach(key => {
+		document.querySelectorAll(animals[key]).forEach(element => {
+			element.addEventListener('click', () => {
+				selectedAnimalType = animals[key];
+				console.log(`Selected animal type: ${key}`);
+			});
 		});
 	});
+
+	// Apply button functionality
+	const applyFilters = document.querySelector('#apply-filters');
+	if (applyFilters) {
+		applyFilters.addEventListener('click', showSelectedAnimals);
+	} else {
+		console.error('Apply filters button not found');
+	}
 });
