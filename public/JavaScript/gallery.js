@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let selectedAnimalType = null
 
   // Function to hide all gallery items
-	const hideAllAnimals = (elements) => {
-		elements.forEach(item => {
-			item.style.display = 'none';
-		});
-	};
+  const hideAllAnimals = (elements) => {
+    elements.forEach(item => {
+      item.style.display = 'none'
+    })
+  }
   // Function to display selected animal
   const showSelectedAnimals = () => {
     hideAllAnimals(document.querySelectorAll('.gallery-items'))
