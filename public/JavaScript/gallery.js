@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
     }
   }
-  //
+  // Target animal type
   document.querySelectorAll('[data-animal-type]').forEach(filterOption => {
     filterOption.addEventListener('click', () => {
       selectedAnimalType = filterOption.dataset.animalType
