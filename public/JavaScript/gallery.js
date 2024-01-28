@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedAnimalType = type
   }
 
-  document.querySelectorAll('[data-animal-type]').forEach(filterOption => {
+  document.querySelectorAll('#singleAnimalFilter [data-animal-type]').forEach(filterOption => {
     filterOption.addEventListener('click', () => {
       setSelectedAnimalType(filterOption.dataset.animalType)
       console.log(`Selected animal type: ${selectedAnimalType}`)
