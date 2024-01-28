@@ -21,15 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Target animal type
   function setSelectedAnimalType (type) {
-    selectedAnimalType = type
+    const filterContainer = document.querySelector('#singleAnimalFilter')
+    if (filterContainer) {
+      filterContainer.addEventListener('click', (event) => {
+        const filterOption = event.target.closest('[data-animal-type]')
+        if (filterOption) {
+          selectedAnimalType = filterOption.dataset.animalType
+          console.log(`Selected animal type: ${selectedAnimalType}`)
+        }
+      })
+    } else {
+      console.error('Filter container not found!')
+    }
   }
-
-  document.querySelectorAll('#singleAnimalFilter [data-animal-type]').forEach(filterOption => {
-    filterOption.addEventListener('click', () => {
-      setSelectedAnimalType(filterOption.dataset.animalType)
-      console.log(`Selected animal type: ${selectedAnimalType}`)
-    })
-  })
   // Apply button functionality
   const applyFilters = document.querySelector('#apply-filters')
   if (applyFilters) {
@@ -37,4 +41,5 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     console.error('Apply filters button not found')
   }
+  setSelectedAnimalType()
 })
