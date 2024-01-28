@@ -26,6 +26,14 @@ This project involves creating a responsive website for Pet Care company that fe
 
 - Jest
 
+### E2E Testing
+
+We are using Playwright to perform some End 2 End Testing.
+Run `npm run e2e-local` to perform all checks locally and see an HTML report.
+Run `npm run e2e` in your CI or if don't need a visual report produced.
+
+For picking certain tests, visual debugging etc you can run `npx playwright test --ui`.
+
 ## Technologies used
 
 - HTML
