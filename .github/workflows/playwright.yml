@@ -1,3 +1,4 @@
+---
 # TODO this is just a basic version and needs more configuration
 name: Playwright Tests
 on: workflow_dispatch
