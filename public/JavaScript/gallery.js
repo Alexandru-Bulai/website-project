@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  let selectedAnimalType = null
+	let selectedAnimalType = null;
+	let galleryItems= document.querySelectorAll('.gallery-items');
 
   // Function to hide all gallery items
   const hideAllAnimals = (elements) => {
@@ -8,18 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
   // Function to display selected animal
-  const showSelectedAnimals = () => {
-    hideAllAnimals(document.querySelectorAll('.gallery-items'))
-    if (selectedAnimalType) {
-      document.querySelectorAll(`.gallery-items[data-animal-type="${selectedAnimalType}"]`).forEach(item => {
-        item.style.display = 'block'
-      })
-    }
-  }
+	const showSelectedAnimals = () => {
+		hideAllAnimals(document.querySelectorAll('.gallery-items'));
+		if (selectedAnimalType) {
+			galleryItems.forEach(item => {
+				if (item.dataset.animalType === selectedAnimalType) {
+					item.style.display = 'block';
+				}
+			});
+		}
+	};
   // Target animal type
+	function setSelectedAnimalType(type) {
+		selectedAnimalType = type;
+	}
+
   document.querySelectorAll('[data-animal-type]').forEach(filterOption => {
     filterOption.addEventListener('click', () => {
-      selectedAnimalType = filterOption.dataset.animalType
+			setSelectedAnimalType(filterOption.dataset.animalType);
       console.log(`Selected animal type: ${selectedAnimalType}`)
     })
   })
