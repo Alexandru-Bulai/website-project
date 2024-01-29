@@ -50,7 +50,7 @@
  * @returns {string}
  * @throws Invalid Number
  */
-function countImages (imagesInDom) {
+function reportGalleryStats (imagesInDom) {
   if (imagesInDom === 0) {
     return 'There are no images in the gallery'
   }
@@ -62,4 +62,4 @@ function countImages (imagesInDom) {
   return String(imagesInDom)
 }
 
-module.exports = countImages
+module.exports = reportGalleryStats
