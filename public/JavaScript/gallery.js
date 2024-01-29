@@ -44,24 +44,22 @@
 //   setSelectedAnimalType()
 // })
 
-
 /**
- * 
- * @param {Number} imagesInDom 
+ *
+ * @param {Number} imagesInDom
  * @returns {string}
  * @throws Invalid Number
  */
-function countImages(imagesInDom) {
-  if(imagesInDom === 0) {
-      return 'There are no images in the gallery';
+function countImages (imagesInDom) {
+  if (imagesInDom === 0) {
+    return 'There are no images in the gallery'
   }
 
-  if(imagesInDom < 0) {
-      throw new Error('Invalid number');
+  if (imagesInDom < 0) {
+    throw new Error('Invalid number')
   }
 
-  return String(imagesInDom);
-  
+  return String(imagesInDom)
 }
 
-module.exports = countImages;
+module.exports = countImages
