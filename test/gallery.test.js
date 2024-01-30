@@ -43,8 +43,8 @@ describe('Gallery Images Counter', () => {
  * @param {Number} activeFilters.rating - Rating received from users
  */
 
-function applyGalleryFilter (activeFilters) {
-}
+// function applyGalleryFilter (activeFilters) {
+// }
 
 /**
  *
