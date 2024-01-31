@@ -62,4 +62,39 @@ function reportGalleryStats (imagesInDom) {
   return String(imagesInDom)
 }
 
-module.exports = reportGalleryStats
+/**
+ *
+ * @param {Array} userSelectedFilters
+ * @returns {Object} activeFilters
+ */
+function generateFilterOptions (userSelectedFilters) {
+  const allowedFilters = {
+    gender: ['male', 'female'],
+    type: ['dog', 'cat', 'fox', 'parrot'],
+    rating: [1, 2, 3, 4, 5]
+  }
+
+  const activeFilters = {
+    gender: null,
+    type: null,
+    rating: null
+  }
+
+  Object.keys(userSelectedFilters).forEach(filterKey => {
+    if (allowedFilters.hasOwnProperty(filterKey)) {
+      let filterValue = userSelectedFilters[filterKey]
+
+      // Handle array and take the last element
+      if (Array.isArray(filterValue)) {
+        filterValue = filterValue[filterValue.length - 1]
+      }
+
+      // Set to null if the value is not allowed or not in the array of allowed values
+      activeFilters[filterKey] = allowedFilters[filterKey].includes(filterValue) ? filterValue : null
+    }
+  })
+
+  return activeFilters
+}
+
+module.exports = { reportGalleryStats, generateFilterOptions }

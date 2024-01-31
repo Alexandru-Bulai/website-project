@@ -2,7 +2,7 @@
 
 // Gallery filters
 
-const reportGalleryStats = require('../public/JavaScript/gallery')
+const { reportGalleryStats, generateFilterOptions } = require('../public/JavaScript/gallery')
 
 // Trigger: click pe apply button
 // Business decisions: multiple filtre, 1 value per filter, if multiple filters selected se aplica AND, counter of displayed images
@@ -46,20 +46,6 @@ describe('Gallery Images Counter', () => {
 // function applyGalleryFilter (activeFilters) {
 // }
 
-/**
- *
- * @param {Array} userSelectedFilters
- * @returns {Object} activeFilters
- */
-function generateFilterOptions (userSelectedFilters) {
-  // TODO: if userSelectedFilters.gender NOT IN ["male", "female"] => = null;
-  return {
-    type: userSelectedFilters.type,
-    gender: userSelectedFilters.gender,
-    rating: userSelectedFilters.rating
-  }
-}
-
 describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selects [cat], it cannot received dog or something else', () => {
     const userSelectedFilters = { type: ['cat'] }
@@ -87,7 +73,7 @@ describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selected gender filters contains invalid value, it will not apply that filter', () => {
     let userSelectedFilters = { type: ['cat'], gender: ['extraterestru'] }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('gender', null)
-    userSelectedFilters = { type: ['cat'], gender: 'male' }
+    userSelectedFilters = { type: ['cat'], gender: 'banana' }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('gender', null)
   })
 
@@ -109,7 +95,7 @@ describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selects invalid rating, it will not apply it', () => {
     let userSelectedFilters = { rating: [-5] }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('rating', null)
-    userSelectedFilters = { rating: 3 }
+    userSelectedFilters = { rating: '3' }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('rating', null)
   })
 
