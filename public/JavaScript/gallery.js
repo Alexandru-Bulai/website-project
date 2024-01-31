@@ -81,20 +81,19 @@ function generateFilterOptions (userSelectedFilters) {
   }
 
   Object.keys(userSelectedFilters).forEach(filterKey => {
-    if (allowedFilters.hasOwnProperty(filterKey)) {
-      let filterValue = userSelectedFilters[filterKey]
-
-      // Handle array and take the last element
+    if (Object.prototype.hasOwnProperty.call(allowedFilters, filterKey)) {
+      const filterValue = userSelectedFilters[filterKey]
+      // Only proceed if filterValue is an array
       if (Array.isArray(filterValue)) {
-        filterValue = filterValue[filterValue.length - 1]
+        const lastFilterValue = filterValue[filterValue.length - 1]
+        // Check if the last value of the array is an allowed value
+        activeFilters[filterKey] = allowedFilters[filterKey].includes(lastFilterValue) ? lastFilterValue : null
+      } else {
+        activeFilters[filterKey] = null
       }
-
-      // Set to null if the value is not allowed or not in the array of allowed values
-      activeFilters[filterKey] = allowedFilters[filterKey].includes(filterValue) ? filterValue : null
     }
   })
 
   return activeFilters
 }
-
 module.exports = { reportGalleryStats, generateFilterOptions }

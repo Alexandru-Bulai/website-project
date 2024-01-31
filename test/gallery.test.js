@@ -57,7 +57,7 @@ describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   })
 
   test('if user selects [dog] and [male], it will generate an object with 3 properties with the correct values for the first 2 and null for ratings', () => {
-    const userSelectedFilters = { type: 'dog', gender: 'male' }
+    const userSelectedFilters = { type: ['dog'], gender: ['male'] }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('type', 'dog')
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('gender', 'male')
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('rating', null)
@@ -73,7 +73,7 @@ describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selected gender filters contains invalid value, it will not apply that filter', () => {
     let userSelectedFilters = { type: ['cat'], gender: ['extraterestru'] }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('gender', null)
-    userSelectedFilters = { type: ['cat'], gender: 'banana' }
+    userSelectedFilters = { type: ['cat'], gender: 'male' }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('gender', null)
   })
 
