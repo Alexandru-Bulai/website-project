@@ -81,19 +81,24 @@ function generateFilterOptions (userSelectedFilters) {
   }
 
   Object.keys(userSelectedFilters).forEach(filterKey => {
-    if (Object.prototype.hasOwnProperty.call(allowedFilters, filterKey)) {
-      const filterValue = userSelectedFilters[filterKey]
-      // Only proceed if filterValue is an array
-      if (Array.isArray(filterValue)) {
-        const lastFilterValue = filterValue[filterValue.length - 1]
-        // Check if the last value of the array is an allowed value
-        activeFilters[filterKey] = allowedFilters[filterKey].includes(lastFilterValue) ? lastFilterValue : null
-      } else {
-        activeFilters[filterKey] = null
-      }
+    if (!Object.prototype.hasOwnProperty.call(allowedFilters, filterKey)) {
+      return
     }
-  })
 
+    const filterValues = userSelectedFilters[filterKey]
+    if (!Array.isArray(filterValues)) {
+      activeFilters[filterKey] = null
+      return
+    }
+
+    const lastFilterValue = filterValues[filterValues.length - 1]
+    if (!allowedFilters[filterKey].includes(lastFilterValue)) {
+      activeFilters[filterKey] = null
+      return
+    }
+
+    activeFilters[filterKey] = lastFilterValue
+  })
   return activeFilters
-}
+};
 module.exports = { reportGalleryStats, generateFilterOptions }
