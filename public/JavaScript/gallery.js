@@ -67,11 +67,11 @@ function reportGalleryStats (imagesInDom) {
  * @param {Object.<string, (string|number)[]>} userSelectedFilters - The user selected filters
  * @returns {Object.<string, (string|null)>} - The active filters
  */
-function generateFilterOptions(userSelectedFilters) {
+function generateFilterOptions (userSelectedFilters) {
   const allowedFilters = {
-    gender: ['male', 'female'],
-    type: ['dog', 'cat', 'fox', 'parrot'],
-    rating: [1, 2, 3, 4, 5]
+    gender: new Set(['male', 'female']),
+    type: new Set(['dog', 'cat', 'fox', 'parrot']),
+    rating: new Set([1, 2, 3, 4, 5])
   }
 
   const activeFilters = {
@@ -80,12 +80,9 @@ function generateFilterOptions(userSelectedFilters) {
     rating: null
   }
 
-  for (const filterKey in userSelectedFilters) {
-    if (Object.hasOwn(allowedFilters, filterKey)) {
-      const filterValues = userSelectedFilters[filterKey]
-      if (Array.isArray(filterValues) && allowedFilters[filterKey].includes(filterValues[filterValues.length - 1])) {
-        activeFilters[filterKey] = filterValues[filterValues.length - 1]
-      }
+  for (const [filterKey, filterValues] of Object.entries(userSelectedFilters)) {
+    if (allowedFilters[filterKey]?.has(filterValues[filterValues.length - 1])) {
+      activeFilters[filterKey] = filterValues[filterValues.length - 1]
     }
   }
 
