@@ -83,17 +83,17 @@ function generateFilterOptions (userSelectedFilters) {
   Object.keys(userSelectedFilters).forEach(filterKey => {
     //  If the filter selected is not allowed then skip the process and go to the next
     if (!Object.prototype.hasOwnProperty.call(allowedFilters, filterKey)) {
-      return activeFilters;
+      return activeFilters
     }
     // If filter option is not in the allowed array set it too null
     const filterValues = userSelectedFilters[filterKey]
     if (!Array.isArray(filterValues)) {
-      return activeFilters;
+      return activeFilters
     }
     // If the last filter selected is not in the allowed array then set it to null
     const lastFilterValue = filterValues[filterValues.length - 1]
     if (!allowedFilters[filterKey].includes(lastFilterValue)) {
-      return activeFilters;
+      return activeFilters
     }
 
     activeFilters[filterKey] = lastFilterValue
