@@ -63,11 +63,11 @@ function reportGalleryStats (imagesInDom) {
 }
 
 /**
- *
- * @param {Array} userSelectedFilters
- * @returns {Object} activeFilters
+ * Generates active filters based on user selected filters
+ * @param {Object.<string, (string|number)[]>} userSelectedFilters - The user selected filters
+ * @returns {Object.<string, (string|null)>} - The active filters
  */
-function generateFilterOptions (userSelectedFilters) {
+function generateFilterOptions(userSelectedFilters) {
   const allowedFilters = {
     gender: ['male', 'female'],
     type: ['dog', 'cat', 'fox', 'parrot'],
@@ -80,24 +80,15 @@ function generateFilterOptions (userSelectedFilters) {
     rating: null
   }
 
-  Object.keys(userSelectedFilters).forEach(filterKey => {
-    //  If the filter selected is not allowed then skip the process and go to the next
-    if (!Object.prototype.hasOwnProperty.call(allowedFilters, filterKey)) {
-      return activeFilters
+  for (const filterKey in userSelectedFilters) {
+    if (Object.hasOwn(allowedFilters, filterKey)) {
+      const filterValues = userSelectedFilters[filterKey]
+      if (Array.isArray(filterValues) && allowedFilters[filterKey].includes(filterValues[filterValues.length - 1])) {
+        activeFilters[filterKey] = filterValues[filterValues.length - 1]
+      }
     }
-    // If filter option is not in the allowed array set it too null
-    const filterValues = userSelectedFilters[filterKey]
-    if (!Array.isArray(filterValues)) {
-      return activeFilters
-    }
-    // If the last filter selected is not in the allowed array then set it to null
-    const lastFilterValue = filterValues[filterValues.length - 1]
-    if (!allowedFilters[filterKey].includes(lastFilterValue)) {
-      return activeFilters
-    }
+  }
 
-    activeFilters[filterKey] = lastFilterValue
-  })
   return activeFilters
-};
+}
 module.exports = { reportGalleryStats, generateFilterOptions }
