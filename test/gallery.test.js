@@ -2,7 +2,7 @@
 
 // Gallery filters
 
-const reportGalleryStats = require('../public/JavaScript/gallery')
+const { reportGalleryStats, generateFilterOptions } = require('../public/JavaScript/gallery')
 
 // Trigger: click pe apply button
 // Business decisions: multiple filtre, 1 value per filter, if multiple filters selected se aplica AND, counter of displayed images
@@ -46,20 +46,6 @@ describe('Gallery Images Counter', () => {
 // function applyGalleryFilter (activeFilters) {
 // }
 
-/**
- *
- * @param {Array} userSelectedFilters
- * @returns {Object} activeFilters
- */
-function generateFilterOptions (userSelectedFilters) {
-  // TODO: if userSelectedFilters.gender NOT IN ["male", "female"] => = null;
-  return {
-    type: userSelectedFilters.type,
-    gender: userSelectedFilters.gender,
-    rating: userSelectedFilters.rating
-  }
-}
-
 describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selects [cat], it cannot received dog or something else', () => {
     const userSelectedFilters = { type: ['cat'] }
@@ -71,7 +57,7 @@ describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   })
 
   test('if user selects [dog] and [male], it will generate an object with 3 properties with the correct values for the first 2 and null for ratings', () => {
-    const userSelectedFilters = { type: 'dog', gender: 'male' }
+    const userSelectedFilters = { type: ['dog'], gender: ['male'] }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('type', 'dog')
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('gender', 'male')
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('rating', null)
@@ -109,7 +95,7 @@ describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selects invalid rating, it will not apply it', () => {
     let userSelectedFilters = { rating: [-5] }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('rating', null)
-    userSelectedFilters = { rating: 3 }
+    userSelectedFilters = { rating: '3' }
     expect(generateFilterOptions(userSelectedFilters)).toHaveProperty('rating', null)
   })
 
