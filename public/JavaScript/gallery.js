@@ -62,4 +62,30 @@ function reportGalleryStats (imagesInDom) {
   return String(imagesInDom)
 }
 
-module.exports = reportGalleryStats
+/**
+ * Generates active filters based on user selected filters
+ * @param {Object.<string, (string|number)[]>} userSelectedFilters - The user selected filters
+ * @returns {Object.<string, (string|null)>} - The active filters
+ */
+function generateFilterOptions (userSelectedFilters) {
+  const allowedFilters = {
+    gender: new Set(['male', 'female']),
+    type: new Set(['dog', 'cat', 'fox', 'parrot']),
+    rating: new Set([1, 2, 3, 4, 5])
+  }
+
+  const activeFilters = {
+    gender: null,
+    type: null,
+    rating: null
+  }
+
+  for (const [filterKey, filterValues] of Object.entries(userSelectedFilters)) {
+    if (allowedFilters[filterKey]?.has(filterValues[filterValues.length - 1])) {
+      activeFilters[filterKey] = filterValues[filterValues.length - 1]
+    }
+  }
+
+  return activeFilters
+}
+module.exports = { reportGalleryStats, generateFilterOptions }
