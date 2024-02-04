@@ -13,4 +13,4 @@ jobs:
     - name: Install modules
       run: npm install
     - name: Run tests
-      run: npx jest test/*
+      run: npm run test
