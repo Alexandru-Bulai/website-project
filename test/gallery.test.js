@@ -35,17 +35,6 @@ describe('Gallery Images Counter', () => {
 // 1 functie interna care primeste ca input dom content/values selected by user si le transforma intr-un obiect pe care il paseaza functiei de afisare.
 // In Jest noi vom testa DOAR functia interna.
 
-/**
- *
- * @param {Object} activeFilters
- * @param {String} activeFilters.type - Type of animal
- * @param {String} activeFilters.gender
- * @param {Number} activeFilters.rating - Rating received from users
- */
-
-// function applyGalleryFilter (activeFilters) {
-// }
-
 describe('Applying Gallery Filters - allow only 1 value per filter', () => {
   test('if user selects [cat], it cannot received dog or something else', () => {
     const userSelectedFilters = { type: ['cat'] }

@@ -88,4 +88,35 @@ function generateFilterOptions (userSelectedFilters) {
 
   return activeFilters
 }
+
+/**
+ *
+ * @param {Object} activeFilters
+ * @param {String} activeFilters.type - Type of animal
+ * @param {String} activeFilters.gender
+ * @param {Number} activeFilters.rating - Rating received from users
+ */
+
+function applyGalleryFilter (activeFilters) {
+  // Access  gallery items
+  const galleryItems = document.querySelectorAll('.gallery-item')
+
+  galleryItems.forEach(item => {
+    const gender = item.getAttribute('data-gender')
+    const type = item.getAttribute('data-type')
+    const rating = parseInt(item.getAttribute('data-rating'), 10)
+
+    // Hide or show gallery item based on active filters
+    const shouldShow = (!activeFilters.gender || activeFilters.gender === gender) &&
+			(!activeFilters.type || activeFilters.type === type) &&
+			(!activeFilters.rating || activeFilters.rating === rating)
+
+    if (shouldShow) {
+      item.style.display = ''
+    } else {
+      item.style.display = 'none'
+    }
+  })
+}
+
 module.exports = { reportGalleryStats, generateFilterOptions }
