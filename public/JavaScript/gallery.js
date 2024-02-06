@@ -1,48 +1,34 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//   let selectedAnimalType = null
-//   const galleryItems = document.querySelectorAll('.gallery-items')
+document.addEventListener('DOMContentLoaded', function () {
+  // Event listeners for animal filter buttons
+  document.querySelectorAll('#singleAnimalFilter div[data-type]').forEach(filterDiv => {
+    filterDiv.addEventListener('click', function () {
+      // Toggle 'active' class on click
+      this.classList.toggle('active')
+    })
+  })
+  const applyFiltersButton = document.querySelector('#apply-filters')
 
-//   // Function to hide all gallery items
-//   const hideAllAnimals = (elements) => {
-//     elements.forEach(item => {
-//       item.style.display = 'none'
-//     })
-//   }
-//   // Function to display selected animal
-//   const showSelectedAnimals = () => {
-//     hideAllAnimals(document.querySelectorAll('.gallery-items'))
-//     if (selectedAnimalType) {
-//       galleryItems.forEach(item => {
-//         if (item.dataset.animalType === selectedAnimalType) {
-//           item.style.display = 'block'
-//         }
-//       })
-//     }
-//   }
-//   // Target animal type
-//   function setSelectedAnimalType (type) {
-//     const filterContainer = document.querySelector('#singleAnimalFilter')
-//     if (filterContainer) {
-//       filterContainer.addEventListener('click', (event) => {
-//         const filterOption = event.target.closest('[data-animal-type]')
-//         if (filterOption) {
-//           selectedAnimalType = filterOption.dataset.animalType
-//           console.log(`Selected animal type: ${selectedAnimalType}`)
-//         }
-//       })
-//     } else {
-//       console.error('Filter container not found!')
-//     }
-//   }
-//   // Apply button functionality
-//   const applyFilters = document.querySelector('#apply-filters')
-//   if (applyFilters) {
-//     applyFilters.addEventListener('click', showSelectedAnimals)
-//   } else {
-//     console.error('Apply filters button not found')
-//   }
-//   setSelectedAnimalType()
-// })
+  applyFiltersButton.addEventListener('click', function (event) {
+    event.preventDefault()
+
+    // Retrieve selected filter values
+    const genderFilter = document.querySelector('input[name="gender"]:checked')?.value
+    const typeFilters = document.querySelectorAll('#singleAnimalFilter div[data-type].active')
+    const ratingFilter = document.querySelector('.star-rating input[type="radio"]:checked')?.getAttribute('data-rating')
+
+    // Prepare the selected filters object
+    const userSelectedFilters = {
+      gender: genderFilter ? [genderFilter] : [],
+      type: Array.from(typeFilters, filter => filter.getAttribute('data-type')),
+      rating: ratingFilter ? [parseInt(ratingFilter)] : []
+    }
+
+    const activeFilters = generateFilterOptions(userSelectedFilters)
+
+    console.log('Applying filters:', activeFilters) // Debugging line
+    applyGalleryFilter(activeFilters)
+  })
+})
 
 /**
  *
@@ -98,24 +84,25 @@ function generateFilterOptions (userSelectedFilters) {
  */
 
 function applyGalleryFilter (activeFilters) {
-  // Access  gallery items
-  const galleryItems = document.querySelectorAll('.gallery-item')
+  console.log('Active Filters:', activeFilters) // Debugging line
+  const galleryItems = document.querySelectorAll('.gallery-items')
+  console.log('Found gallery items:', galleryItems.length) // Debugging line
 
   galleryItems.forEach(item => {
     const gender = item.getAttribute('data-gender')
     const type = item.getAttribute('data-type')
     const rating = parseInt(item.getAttribute('data-rating'), 10)
 
+    // Explicitly log each item's data for debugging
+    console.log(`Item data - Gender: ${gender}, Type: ${type}, Rating: ${rating}`)
+
     // Hide or show gallery item based on active filters
     const shouldShow = (!activeFilters.gender || activeFilters.gender === gender) &&
-			(!activeFilters.type || activeFilters.type === type) &&
-			(!activeFilters.rating || activeFilters.rating === rating)
+                        (!activeFilters.type || activeFilters.type === type) &&
+                        (!activeFilters.rating || activeFilters.rating === rating)
 
-    if (shouldShow) {
-      item.style.display = ''
-    } else {
-      item.style.display = 'none'
-    }
+    item.style.display = shouldShow ? 'block' : 'none'
+    console.log('Item:', item, 'Should Show:', shouldShow) // Debugging line
   })
 }
 
