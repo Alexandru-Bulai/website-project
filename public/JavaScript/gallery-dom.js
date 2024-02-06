@@ -1,4 +1,4 @@
-import { generateFilterOptions, applyGalleryFilter } from './gallery.js'
+/* global generateFilterOptions, applyGalleryFilter */
 
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners for animal filter buttons
