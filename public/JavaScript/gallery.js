@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners for animal filter buttons
-  document.querySelectorAll('#singleAnimalFilter div[data-type]').forEach(selectingDivFilter => {
-    selectingDivFilter.addEventListener('click', function () {
+  document.querySelectorAll('#singleAnimalFilter div[data-type]').forEach(filterElementsActive => {
+    filterElementsActive.addEventListener('click', function () {
       // Toggle 'active' class on click
       this.classList.toggle('active')
     })
