@@ -32,16 +32,16 @@
 			<button id="animalsFilterButton" class="p-2 rounded-full ring-4 text-xl font-bold text-blue-400 bg-blue-800 hover:text-white hover:bg-blue-300 md:ml-4 md:hidden">Animal</button>
 			<div id="singleAnimalFilter" class="hidden md:flex">
 				<div class="flex justify-center">
-					<div data-animal-type="dog" class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="dog" class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
 						<img src="Assets/images/gallery/filter/dog.svg" alt="dog">
 					</div>
-					<div class="cat rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="cat" class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
 						<img src="Assets/images/gallery/filter/cat.svg" alt="cat">
 					</div>
-					<div class="fox rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="fox" class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
 						<img src="Assets/images/gallery/filter/fox.svg" alt="fox">
 					</div>
-					<div class="parrot rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="parrot" class="rounded-full mt-6 mx-4 p-2 ring-4 hover:bg-indigo-400 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
 						<img src="Assets/images/gallery/filter/parrot.svg" alt="parrot">
 					</div>
 				</div>
@@ -54,11 +54,11 @@
 				<label class="t"><strong><em>Gender:</em></strong></label>
 				<div class="flex">
 					<label class="mx-2" for="male">M</label>
-					<input type="radio" name="gender" id="male" value="M">
+					<input type="radio" name="gender" id="male" value="male">
 				</div>
 				<div class="flex">
 					<label class="mx-2" for="female">F</label>
-					<input type="radio" name="gender" id="female" value="F">
+					<input type="radio" name="gender" id="female" value="female">
 				</div>
 			</form>
 		</div>
@@ -68,15 +68,15 @@
 			<div class="flex flex-col justify-center">
 				<label class="text-lg font-semibold">Rating</label>
 				<div class="star-rating mb-3">
-					<input type="radio" name="rate" id="rate-5">
+					<input type="radio" data-rating="5" id="rate-5">
 					<label for="rate-5"></label>
-					<input type="radio" name="rate" id="rate-4">
+					<input type="radio" data-rating="4" id="rate-4">
 					<label for="rate-4"></label>
-					<input type="radio" name="rate" id="rate-3">
+					<input type="radio" data-rating="3" id="rate-3">
 					<label for="rate-3"></label>
-					<input type="radio" name="rate" id="rate-2">
+					<input type="radio" data-rating="2" id="rate-2">
 					<label for="rate-2"></label>
-					<input type="radio" name="rate" id="rate-1">
+					<input type="radio" data-rating="1" id="rate-1">
 					<label for="rate-1"></label>
 				</div>
 			</div>
@@ -96,7 +96,7 @@
 <!-- Images gallery container start -->
 	<div class="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="img-container">
 		<!-- Image card container -->
-			<div data-animal-type="dog" data-gender="male" data-rating="4" class="gallery-items relative">
+			<div data-type="dog" data-gender="male" data-rating="4" class="gallery-items relative">
 				<img src="Assets/images/gallery/gallery_grid/dog-1.png" alt="dog portrait">
 				<div class="stats-box flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">
 					<div class="text-15 font-bold text-blue-800">Gender: male</div>
@@ -262,5 +262,6 @@
 
 <script src="JavaScript/common.js"></script>
 <script src="JavaScript/gallery.js"></script>
+<script src="JavaScript/gallery-dom.js"></script>
 </body>
 </html>
