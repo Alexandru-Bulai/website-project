@@ -74,4 +74,4 @@ function applyGalleryFilter (activeFilters) {
   })
 }
 
-module.exports = { reportGalleryStats, generateFilterOptions, applyGalleryFilter }
+export { reportGalleryStats, generateFilterOptions, applyGalleryFilter }
