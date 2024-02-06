@@ -1,3 +1,5 @@
+/* global generateFilterOptions, applyGalleryFilter */
+
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners for animal filter buttons
   document.querySelectorAll('#singleAnimalFilter div[data-type]').forEach(activeFilterElements => {
