@@ -1,7 +1,7 @@
 /* global generateFilterOptions, applyGalleryFilter */
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners for animal filter buttons
-  document.querySelectorAll('#singleAnimalFilter div[data-type]').forEach(activeFilterElements => {
+  document.querySelectorAll('#single-animal-filter div[data-type]').forEach(activeFilterElements => {
     activeFilterElements.addEventListener('click', function () {
       // Toggle 'active' class on click
       this.classList.toggle('selected')
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Retrieve selected filter values
     const genderFilter = document.querySelector('input[name="gender"]:checked')?.value
-    const typeFilters = document.querySelectorAll('#singleAnimalFilter div[data-type].selected')
+    const typeFilters = document.querySelectorAll('#single-animal-filter div[data-type].selected')
     const ratingFilter = document.querySelector('.star-rating input[type="radio"]:checked')?.getAttribute('data-rating')
 
     // Prepare the selected filters object
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     applyGalleryFilter(activeFilters)
 
     // Reset Filters after applying
-    document.querySelectorAll('#singleAnimalFilter div[data-type].selected').forEach(element => {
+    document.querySelectorAll('#single-animal-filter div[data-type].selected').forEach(element => {
       element.classList.remove('selected')
     })
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     // Reset type filters visual cue
-    document.querySelectorAll('#singleAnimalFilter div[data-type].selected').forEach(typeFilter => {
+    document.querySelectorAll('#single-animal-filter div[data-type].selected').forEach(typeFilter => {
       typeFilter.classList.remove('selected')
     })
 
