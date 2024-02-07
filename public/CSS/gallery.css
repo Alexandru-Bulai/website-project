@@ -44,3 +44,9 @@
 .gallery-items:hover .stats-box {
 	opacity: 1;
 }
+
+#singleAnimalFilter div[data-type]:hover,
+#singleAnimalFilter div[data-type].selected {
+  background-color: #4f46e5;
+  transform: scale(1.05);
+}
