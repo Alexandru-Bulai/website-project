@@ -7,9 +7,11 @@ function toggleElements (buttonSelector, elementSelectors) {
       elementSelectors.forEach(selector => {
         const element = document.querySelector(selector)
         if (element) {
-          element.classList.toggle('hidden')
-        } else {
-          element.classList.toggle('flex')
+          if (element.classList.contains('hidden')) {
+            element.classList.replace('hidden', 'flex')
+          } else {
+            element.classList.replace('flex', 'hidden')
+          }
         }
       })
     })
@@ -20,4 +22,4 @@ function toggleElements (buttonSelector, elementSelectors) {
 toggleElements('#navButton', ['#navBar'])
 toggleElements('#filtersButton', ['#filtersButton', '#filtersMenu', '#closeFilters'])
 toggleElements('#closeFilters', ['#filtersButton', '#filtersMenu', '#closeFilters'])
-toggleElements('#animalsFilterButton', ['#singleAnimalFilter'])
+toggleElements('#animalsFilterButton', ['#single-animal-filter'])
