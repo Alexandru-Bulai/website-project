@@ -1,11 +1,10 @@
 /* global generateFilterOptions, applyGalleryFilter */
-
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners for animal filter buttons
-  document.querySelectorAll('#singleAnimalFilter div[data-type]').forEach(activeFilterElements => {
+  document.querySelectorAll('#single-animal-filter div[data-type]').forEach(activeFilterElements => {
     activeFilterElements.addEventListener('click', function () {
       // Toggle 'active' class on click
-      this.classList.toggle('active')
+      this.classList.toggle('selected')
     })
   })
   const applyFiltersButton = document.querySelector('#apply-filters')
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Retrieve selected filter values
     const genderFilter = document.querySelector('input[name="gender"]:checked')?.value
-    const typeFilters = document.querySelectorAll('#singleAnimalFilter div[data-type].active')
+    const typeFilters = document.querySelectorAll('#single-animal-filter div[data-type].selected')
     const ratingFilter = document.querySelector('.star-rating input[type="radio"]:checked')?.getAttribute('data-rating')
 
     // Prepare the selected filters object
@@ -29,5 +28,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('Applying filters:', activeFilters) // Debugging line
     applyGalleryFilter(activeFilters)
+
+    // Reset Filters after applying
+    document.querySelectorAll('#single-animal-filter div[data-type].selected').forEach(element => {
+      element.classList.remove('selected')
+    })
+
+    resetFilters()
   })
+  function resetFilters () {
+    // Reset gender filter
+    document.querySelectorAll('input[name="gender"]').forEach(radio => {
+      radio.checked = false
+    })
+
+    // Reset type filters visual cue
+    document.querySelectorAll('#single-animal-filter div[data-type].selected').forEach(typeFilter => {
+      typeFilter.classList.remove('selected')
+    })
+
+    // Reset rating filter
+    document.querySelectorAll('.star-rating input[type="radio"]').forEach(radio => {
+      radio.checked = false
+    })
+  }
 })
