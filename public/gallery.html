@@ -8,9 +8,9 @@
 <body class="bg-blue-50">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="CSS/gallery.css">
-
+<div id="hero-img">
 <!-- Menu beginning -->
-<div class="flex flex-col bg-indigo-100 my-8 md:flex-row max-m-xl">
+<div class="flex flex-col bg-indigo-100 my-8 md:flex-row max-m-xl rounded-xl md:rounded-full">
 	<div class="flex items-center justify-center">
 		<img class="w-6 h-6" src="Assets/images/gallery/black_heart_border.svg" alt="black heart">
 		<p class="text-xl font-extrabold text-indigo-400"><em>Gallery</em></p>
@@ -25,7 +25,7 @@
 	</div>
 
 <!-- Filters container -->
-<div id="filtersMenu" class="hidden flex-col justify-center bg-blue-300 rounded-2xl text-center md:flex md:flex-row md:flex-1 md:justify-around md:items-center md:ml-5">
+<div id="filtersMenu" class="hidden flex-col justify-center bg-blue-300 rounded-2xl text-center md:flex md:flex-row md:flex-1 md:justify-around md:items-center md:ml-5 md:rounded-full">
 
 <!-- Animal filter options button -->
 		<div class="flex flex-col py-5">
@@ -51,7 +51,7 @@
 <!-- Gender filter option -->
 		<div class="flex justify-center mb-4 mt-2">
 			<form class="flex md:flex-col lg:flex-row">
-				<label class="t"><strong><em>Gender:</em></strong></label>
+				<label class="md:hidden lg:block"><strong><em>Gender:</em></strong></label>
 				<div class="flex">
 					<label class="mx-2" for="male">M</label>
 					<input type="radio" name="gender" id="male" value="male">
@@ -82,17 +82,29 @@
 			</div>
 		</div>
 		<div class="flex justify-center md:mr-3">
-			<button id="apply-filters" class="bg-black text-white text-lg ring-2 py-1 px-4 rounded-lg self-center" type="submit"><strong>Apply</strong></button>
+			<button id="apply-filters" class="bg-black text-white text-lg ring-2 py-1 px-4 rounded-full self-center" type="submit"><strong>Apply</strong></button>
 		</div>
 	</div>
 </div>
 <!-- End filters container -->
 
 <!-- Menu end -->
+<!-- Images counter -->
+<div class="flex justify-center items-center">
+	<div class="bg-blue-500 text-white py-2 px-4 rounded-full shadow-lg flex items-center justify-center text-sm md:text-base lg:text-lg">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6 lg:h-8 lg:w-8 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="1.5 md:stroke-width-2 lg:stroke-width-2"
+						d="M15 17h5l-1.5-1.5m0 0l1.5-1.5m-1.5 1.5L15 13m1.5 1.5H15m6 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+		</svg>
+		<span class="font-semibold">Wildlife Tally:</span>
+		<span class="ml-2"
+					id="image-counter">123</span>
+	</div>
+</div>
 
 <!-- Gallery section -->
-<div id="background-img">
-
 <!-- Images gallery container start -->
 	<div class="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="img-container">
 		<!-- Image card container -->
