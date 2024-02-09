@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.classList.toggle('selected')
     })
   })
+
   const applyFiltersButton = document.querySelector('#apply-filters')
 
   applyFiltersButton.addEventListener('click', function (event) {
@@ -28,14 +29,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     console.log('Applying filters:', activeFilters) // Debugging line
     applyGalleryFilter(activeFilters)
-
+    displayGalleryItemsNum()
     // Reset Filters after applying
     document.querySelectorAll('#single-animal-filter div[data-type].selected').forEach(element => {
       element.classList.remove('selected')
     })
-
     resetFilters()
   })
+
   function resetFilters () {
     // Reset gender filter
     document.querySelectorAll('input[name="gender"]').forEach(radio => {
@@ -52,4 +53,18 @@ document.addEventListener('DOMContentLoaded', function () {
       radio.checked = false
     })
   }
+
+  function displayGalleryItemsNum () {
+    const galleryItems = document.querySelectorAll('.gallery-items')
+    const visibleGalleryItems = Array.from(galleryItems).filter(item => item.style.display !== 'none')
+    const returnCount = document.querySelector('#number-items')
+
+    if (returnCount) {
+      returnCount.textContent = `${visibleGalleryItems.length}`
+    } else {
+      console.error('Display div could not be found or does not exist')
+    }
+  }
+
+  displayGalleryItemsNum()
 })
