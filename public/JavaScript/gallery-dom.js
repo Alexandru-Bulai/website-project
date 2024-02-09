@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const activeFilters = generateFilterOptions(userSelectedFilters)
 
-    console.log('Applying filters:', activeFilters) // Debugging line
+    // console.log('Applying filters:', activeFilters) // Debugging line
     applyGalleryFilter(activeFilters)
     displayGalleryItemsNum()
     // Reset Filters after applying
@@ -56,11 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function displayGalleryItemsNum () {
     const galleryItems = document.querySelectorAll('.gallery-items')
-    const visibleGalleryItems = Array.from(galleryItems).filter(item => item.style.display !== 'none')
+    const visibleGalleryItems = Array.from(galleryItems).filter(item => item.style.display !== 'none').length
     const returnCount = document.querySelector('#number-items')
 
+    const message = reportGalleryStats(visibleGalleryItems)
+
     if (returnCount) {
-      returnCount.textContent = `${visibleGalleryItems.length}`
+      returnCount.textContent = message
     } else {
       console.error('Display div could not be found or does not exist')
     }

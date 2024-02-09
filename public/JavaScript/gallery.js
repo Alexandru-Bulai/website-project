@@ -52,9 +52,9 @@ function generateFilterOptions (userSelectedFilters) {
  */
 
 function applyGalleryFilter (activeFilters) {
-  console.log('Active Filters:', activeFilters) // Debugging line
+  // console.log('Active Filters:', activeFilters) // Debugging line
   const galleryItems = document.querySelectorAll('.gallery-items')
-  console.log('Found gallery items:', galleryItems.length) // Debugging line
+  // console.log('Found gallery items:', galleryItems.length) // Debugging line
 
   galleryItems.forEach(item => {
     const gender = item.getAttribute('data-gender')
@@ -62,7 +62,7 @@ function applyGalleryFilter (activeFilters) {
     const rating = parseInt(item.getAttribute('data-rating'), 10)
 
     // Explicitly log each item's data for debugging
-    console.log(`Item data - Gender: ${gender}, Type: ${type}, Rating: ${rating}`)
+    // console.log(`Item data - Gender: ${gender}, Type: ${type}, Rating: ${rating}`)
 
     // Hide or show gallery item based on active filters
     const shouldShow = (!activeFilters.gender || activeFilters.gender === gender) &&
@@ -70,7 +70,7 @@ function applyGalleryFilter (activeFilters) {
                         (!activeFilters.rating || activeFilters.rating === rating)
 
     item.style.display = shouldShow ? 'block' : 'none'
-    console.log('Item:', item, 'Should Show:', shouldShow) // Debugging line
+    // console.log('Item:', item, 'Should Show:', shouldShow) // Debugging line
   })
 }
 
