@@ -1,4 +1,4 @@
-/* global generateFilterOptions, applyGalleryFilter */
+/* global generateFilterOptions, applyGalleryFilter, reportGalleryStats */
 document.addEventListener('DOMContentLoaded', function () {
   // Event listeners for animal filter buttons
   document.querySelectorAll('#single-animal-filter div[data-type]').forEach(activeFilterElements => {
