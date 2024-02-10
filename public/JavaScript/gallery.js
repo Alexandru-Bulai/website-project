@@ -52,9 +52,7 @@ function generateFilterOptions (userSelectedFilters) {
  */
 
 function applyGalleryFilter (activeFilters) {
-  // console.log('Active Filters:', activeFilters) // Debugging line
   const galleryItems = document.querySelectorAll('.gallery-items')
-  // console.log('Found gallery items:', galleryItems.length) // Debugging line
 
   galleryItems.forEach(item => {
     const gender = item.getAttribute('data-gender')
@@ -70,7 +68,6 @@ function applyGalleryFilter (activeFilters) {
                         (!activeFilters.rating || activeFilters.rating === rating)
 
     item.style.display = shouldShow ? 'block' : 'none'
-    // console.log('Item:', item, 'Should Show:', shouldShow) // Debugging line
   })
 }
 
