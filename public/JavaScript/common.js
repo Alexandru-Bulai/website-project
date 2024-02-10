@@ -10,10 +10,9 @@ function toggleElements (buttonSelector, elementSelectors) {
   button.addEventListener('click', () => {
     elementSelectors.forEach(selector => {
       const element = document.querySelector(selector)
-      if (element && element.classList.contains('hidden')) {
-        element.classList.replace('hidden', 'flex')
-      } else if (element) {
-        element.classList.replace('flex', 'hidden')
+      if (element) {
+        element.classList.toggle('hidden')
+        element.classList.toggle('flex')
       }
     })
   })
