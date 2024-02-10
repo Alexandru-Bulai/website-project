@@ -35,7 +35,11 @@
 	box-sizing: border-box;
 }
 
-.gallery-items .stats-box {
+.gallery-items {
+	position : relative;
+}
+
+.stats-box {
 	position: absolute;
 	opacity: 0;
 	transition: opacity 0.3s ease;
