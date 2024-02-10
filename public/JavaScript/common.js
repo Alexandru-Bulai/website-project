@@ -2,22 +2,22 @@
 function toggleElements (buttonSelector, elementSelectors) {
   const button = document.querySelector(buttonSelector)
 
-  if (button && Array.isArray(elementSelectors)) {
-    button.addEventListener('click', () => {
-      elementSelectors.forEach(selector => {
-        const element = document.querySelector(selector)
-        if (element) {
-          element.classList.toggle('hidden')
-        } else {
-          element.classList.toggle('flex')
-        }
-      })
-    })
-  } else {
+  if (!button || !Array.isArray(elementSelectors)) {
     console.warn('Button not found or invalid element selectors')
+    return
   }
+
+  button.addEventListener('click', () => {
+    elementSelectors.forEach(selector => {
+      const element = document.querySelector(selector)
+      if (element) {
+        element.classList.toggle('hidden')
+        element.classList.toggle('flex')
+      }
+    })
+  })
 }
 toggleElements('#navButton', ['#navBar'])
 toggleElements('#filtersButton', ['#filtersButton', '#filtersMenu', '#closeFilters'])
 toggleElements('#closeFilters', ['#filtersButton', '#filtersMenu', '#closeFilters'])
-toggleElements('#animalsFilterButton', ['#singleAnimalFilter'])
+toggleElements('#animalsFilterButton', ['#single-animal-filter'])
