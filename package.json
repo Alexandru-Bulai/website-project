@@ -19,8 +19,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "jest": {
-    "testEnvironment": "jsdom"
-  }
+  "license": "ISC"
 }
