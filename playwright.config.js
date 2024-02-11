@@ -71,7 +71,7 @@ module.exports = defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'npm run e2e-test',
+    command: 'npm run e2e',
     url: 'http://127.0.0.1:8081/home.html',
     reuseExistingServer: !process.env.CI
   }
