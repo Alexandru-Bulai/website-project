@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */
 const jsdom = require('jsdom')
 const { JSDOM } = jsdom
 const { displayGalleryItemsNum } = require('../public/JavaScript/gallery-dom.js')
