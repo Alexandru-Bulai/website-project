@@ -12,15 +12,13 @@ This project involves creating a responsive website for Pet Care company that fe
 - `git clone https://github.com/Alexandru-Bulai/website-project.git`
 - Open the terminal and go to the folder `cd website-project`
 - Run `npm install` to get all the modules and dependencies ready
-- Now you all set to modify the website at your liking :)
-2. Run `docker-compose up -d` OR `docker compose up -d`.
+2. Run `docker-compose up -d && npx jest --testPathPattern="test/*" --coverage --watch; docker-compose down`.
 3. Visit `http://localhost:8081/home.html`.
 4. You are all set up to edit the webpage! Enjoy 😄
 
-## Testing enviroment (optional)
+## Testing enviroment
 1) In the Test folder you can find the tests runned on JavaScript and you can add more tests there.
-2) Once you finished writing the test simply rum `npx jest` the command line to see if your test passes.
-3) If you have any issue you can follow this guide (`https://www.youtube.com/watch?v=FgnxcUQ5vho&t=192s`).
+2) If you have any issue you can follow this guide (`https://www.youtube.com/watch?v=FgnxcUQ5vho&t=192s`).
 
 ## Framework used
 
