@@ -9,10 +9,10 @@ This project involves creating a responsive website for Pet Care company that fe
 ## Setup and Usage
 
 1. Clone the repository to your local machine with :
-  - `git clone https://github.com/Alexandru-Bulai/website-project.git`
-  - Open the terminal and go to the folder `cd website-project`
-  - Run `npm install` to get all the modules and dependencies ready
-  - Open the public and start modify the website at your liking :)
+- `git clone https://github.com/Alexandru-Bulai/website-project.git`
+- Open the terminal and go to the folder `cd website-project`
+- Run `npm install` to get all the modules and dependencies ready
+- Open the public and start modify the website at your liking :)
 2. Run `docker-compose up -d` OR `docker compose up -d`.
 3. Visit `http://localhost:8081/home.html`.
 4. You are all set up to edit the webpage! Enjoy 😄
