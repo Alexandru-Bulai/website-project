@@ -13,7 +13,7 @@
     "jest-environment-jsdom": "^29.7.0"
   },
   "scripts": {
-    "test": "jest --testPathPattern=test/* --coverage",
+    "dev": "docker-compose up -d && npx jest --testPathPattern=\"test/*\" --coverage --watch; docker-compose down",
     "e2e-local": "npx playwright test --reporter=html  && npx playwright show-report",
     "e2e": "npx playwright test"
   },
