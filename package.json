@@ -14,7 +14,7 @@
   },
   "scripts": {
     "dev": "docker-compose up -d && jest --testPathPattern=test/* --coverage --watch; docker-compose down",
-		"test": "jest --testPathPattern=test/* --coverage --watch",
+		"test": "jest --testPathPattern=test/* --coverage",
     "e2e-local": "npx playwright test --reporter=html  && npx playwright show-report",
     "e2e": "npx playwright test"
   },
