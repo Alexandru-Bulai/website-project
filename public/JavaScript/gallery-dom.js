@@ -98,7 +98,7 @@ async function getPets () {
     galleryContainer.insertAdjacentHTML('beforeend',
       `<div data-type=${pet.type} data-gender=${pet.gender} data-rating=${pet.rating} class="gallery-items relative transform hover:scale-105  duration-500">\n'
         <img src="Assets/images/gallery/gallery_grid/${pet.img}" alt="${pet.type} portrait">\n
-        <div class="stats-box flex flex-col justify-center items-center  absolute bottom-0 	inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">\n
+        <div class="stats-box flex flex-col justify-center items-center absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">\n
         <div class="text-15 font-bold text-blue-800">Gender: ${pet.gender}</div>\n
         <div class="text-15 font-bold text-blue-800">Rating: ${pet.rating}☆</div>\n
             </div></div>\n
