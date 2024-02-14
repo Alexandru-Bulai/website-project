@@ -70,7 +70,7 @@ if (typeof document !== 'undefined') {
     }
 
     displayGalleryItemsNum('.gallery-items')
-    getPets()
+    getPets('#img-container')
   })
 }
 
@@ -89,11 +89,11 @@ if (typeof document !== 'undefined') {
 // })
 
 // FETCH OPTION 2
-async function getPets () {
+async function getPets (item) {
   const response = await fetch('JavaScript/gallery-items.json')
   const data = await response.json()
   const allPets = data.payload.pets
-  const galleryContainer = document.querySelector('#img-container')
+  const galleryContainer = document.querySelector(item)
   allPets.forEach(pet => {
     galleryContainer.insertAdjacentHTML('beforeend',
       `<div data-type=${pet.type} data-gender=${pet.gender} data-rating=${pet.rating} class="gallery-items relative transform hover:scale-105  duration-500">\n'
