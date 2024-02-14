@@ -1,0 +1,126 @@
+{
+	"payload": {
+		"pets": [
+			{
+				"type": "dog",
+				"gender": "male",
+				"rating": "4",
+				"img": "dog-1.png"
+			},
+			{
+				"type": "cat",
+				"gender": "male",
+				"rating": "3",
+				"img": "cat-1.png"
+			},
+			{
+				"type": "fox",
+				"gender": "female",
+				"rating": "2",
+				"img": "fox-1.jpeg"
+			},
+			{
+				"type": "parrot",
+				"gender": "female",
+				"rating": "5",
+				"img": "parrot-1.jpeg"
+			},
+			{
+				"type": "dog",
+				"gender": "male",
+				"rating": "3",
+				"img": "dog-2.png"
+			},
+			{
+				"type": "cat",
+				"gender": "female",
+				"rating": "4",
+				"img": "cat-2.png"
+			},
+			{
+				"type": "fox",
+				"gender": "male",
+				"rating": "5",
+				"img": "fox-2.jpeg"
+			},
+			{
+				"type": "parrot",
+				"gender": "male",
+				"rating": "3",
+				"img": "parrot-2.jpeg"
+			},
+			{
+				"type": "dog",
+				"gender": "female",
+				"rating": "1",
+				"img": "dog-3.png"
+			},
+			{
+				"type": "cat",
+				"gender": "male",
+				"rating": "1",
+				"img": "cat-3.png"
+			},
+			{
+				"type": "fox",
+				"gender": "female",
+				"rating": "2",
+				"img": "fox-3.jpeg"
+			},
+			{
+				"type": "parrot",
+				"gender": "female",
+				"rating": "4",
+				"img": "parrot-3.jpeg"
+			},
+			{
+				"type": "dog",
+				"gender": "female",
+				"rating": "5",
+				"img": "dog-4.jpeg"
+			},
+			{
+				"type": "cat",
+				"gender": "male",
+				"rating": "4",
+				"img": "cat-4.png"
+			},
+			{
+				"type": "fox",
+				"gender": "female",
+				"rating": "4",
+				"img": "fox-4.jpeg"
+			},
+			{
+				"type": "parrot",
+				"gender": "male",
+				"rating": "2",
+				"img": "parrot-4.jpeg"
+			},
+			{
+				"type": "dog",
+				"gender": "female",
+				"rating": "5",
+				"img": "dog-5.jpeg"
+			},
+			{
+				"type": "cat",
+				"gender": "male",
+				"rating": "5",
+				"img": "cat-5.png"
+			},
+			{
+				"type": "fox",
+				"gender": "female",
+				"rating": "3",
+				"img": "fox-5.jpeg"
+			},
+			{
+				"type": "parrot",
+				"gender": "male",
+				"rating": "5",
+				"img": "parrot-5.jpeg"
+			}
+		]
+	}
+}
