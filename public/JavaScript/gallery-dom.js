@@ -70,43 +70,40 @@ if (typeof document !== 'undefined') {
     }
 
     displayGalleryItemsNum('.gallery-items')
+    getPets()
   })
 }
 
 // FETCH OPTION 1
 
 // fetch('JavaScript/gallery-items.json').then(response => response.json()).then(data => {
-// 	const allPets = data.payload.pets;
-// 	allPets.forEach(pet => {
-// 		document.querySelector('#img-container').insertAdjacentHTML('afterend', `<div data-type=${pet.type} data-gender=${pet.gender} data-rating=${pet.rating} class="gallery-items relative transform hover:scale-105  duration-500">\n'
-// 			<img src="Assets/images/gallery/gallery_grid/${pet.img}" alt="${pet.type} portrait">\n
-// 			 <div class="stats-box flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">\n
-// 			 <div class="text-15 font-bold text-blue-800">Gender: ${pet.gender}</div>\n
-// 			 <div class="text-15 font-bold text-blue-800">Rating: ${pet.rating}☆</div>\n
-// 			</div></div>` );
-// 	})
-// 		;
+//   const allPets = data.payload.pets;
+//   allPets.forEach(pet => {
+//     document.querySelector('#img-container').insertAdjacentHTML('afterend', `<div data-type=${pet.type} data-gender=${pet.gender} data-rating=${pet.rating} class="gallery-items relative transform hover:scale-105  duration-500">\n'
+//       <img src="Assets/images/gallery/gallery_grid/${pet.img}" alt="${pet.type} portrait">\n
+//       <div class="stats-box flex flex-col justify-center items-center  absolute bottom-0 inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">\n
+//       <div class="text-15 font-bold text-blue-800">Gender: ${pet.gender}</div>\n
+//       <div class="text-15 font-bold text-blue-800">Rating: ${pet.rating}☆</div>\n
+//       </div></div>` );
+//   })
 // })
 
-
 // FETCH OPTION 2
-async function getPets() {
-	const response = await fetch("JavaScript/gallery-items.json");
-	const data = await response.json();
-	const allPets = data.payload.pets;
-	const galleryContainer = document.querySelector('#img-container');
-	allPets.forEach(pet => {
-		galleryContainer.insertAdjacentHTML('beforeend',
-			`<div data-type=${pet.type} data-gender=${pet.gender} data-rating=${pet.rating} class="gallery-items relative transform hover:scale-105  duration-500">\n'
-				<img src="Assets/images/gallery/gallery_grid/${pet.img}" alt="${pet.type} portrait">\n
-				<div class="stats-box flex flex-col justify-center items-center  absolute bottom-0 	inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">\n
-				<div class="text-15 font-bold text-blue-800">Gender: ${pet.gender}</div>\n
-				<div class="text-15 font-bold text-blue-800">Rating: ${pet.rating}☆</div>\n
-						</div></div>\n
-						`);
-	})
+async function getPets () {
+  const response = await fetch('JavaScript/gallery-items.json')
+  const data = await response.json()
+  const allPets = data.payload.pets
+  const galleryContainer = document.querySelector('#img-container')
+  allPets.forEach(pet => {
+    galleryContainer.insertAdjacentHTML('beforeend',
+      `<div data-type=${pet.type} data-gender=${pet.gender} data-rating=${pet.rating} class="gallery-items relative transform hover:scale-105  duration-500">\n'
+        <img src="Assets/images/gallery/gallery_grid/${pet.img}" alt="${pet.type} portrait">\n
+        <div class="stats-box flex flex-col justify-center items-center  absolute bottom-0 	inset-x-0 bg-purple-400 h-24 bg-opacity-90 opacity-0">\n
+        <div class="text-15 font-bold text-blue-800">Gender: ${pet.gender}</div>\n
+        <div class="text-15 font-bold text-blue-800">Rating: ${pet.rating}☆</div>\n
+            </div></div>\n
+            `)
+  })
 }
-
-getPets();
 
 module.exports = { displayGalleryItemsNum }
