@@ -68,6 +68,8 @@ if (typeof document !== 'undefined') {
         radio.checked = false
       })
     }
+
+    displayGalleryItemsNum('.gallery-items')
   })
 }
 module.exports = { displayGalleryItemsNum }
