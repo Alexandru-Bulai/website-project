@@ -77,13 +77,15 @@ describe('json file fetching data on gallery.html', () => {
     const dom = new JSDOM('<!DOCTYPE html><html><body><div id="img-container"></div></body></html>')
     global.document = dom.window.document
 
+    const expectedNumberOfPets = 1
+
     await getPets('#img-container')
 
     const galleryContainer = document.querySelector('#img-container')
     const galleryItems = galleryContainer.querySelectorAll('.gallery-items')
 
     // Check if the gallery items are correctly added to the galleryContainer
-    expect(galleryItems.length).toBeGreaterThan(0)
+    expect(galleryItems.length).toBe(expectedNumberOfPets)
 
     // Check the content of the first gallery item
     const firstItem = galleryItems[0]
