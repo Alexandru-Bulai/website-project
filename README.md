@@ -2,6 +2,9 @@
 
 [![Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
+![Fluffy my Immagination](https://raw.githubusercontent.com/Alexandru-Bulai/website-project/main/fluffy-my-pillow.gif)
+
+
 ## Project Overview
 
 This project aims to develop a comprehensive and responsive website for a Pet Care company, showcasing its services and commitment to pet well-being through a visually appealing and user-friendly interface. The website is meticulously crafted using the latest web technologies to ensure high performance and accessibility across various devices.
