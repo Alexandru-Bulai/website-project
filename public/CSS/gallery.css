@@ -1,23 +1,30 @@
 .star-rating label {
-	cursor: pointer;
-	font-size: 2rem;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 0 5px;
+    transition: color 0.2s ease-in-out;
 }
 
 .star-rating label::before {
-	content: '☆';
-	color: #17488d;
+    content: '☆';
+    color: #FFD700;
 }
 
 .star-rating input[type="radio"] {
-	display: none;
+    display: none;
 }
 
 .star-rating label:hover::before,
-.star-rating label:hover ~ label::before,
-.star-rating input[type="radio"]:checked ~ label::before {
-	content: '★';
-	color: #5604e3;
+.star-rating label:hover ~ label::before {
+    content: '★';
+    color: #FFA500;
 }
+
+.star-rating input[type="radio"]:checked ~ label::before {
+    content: '★';
+    color: #FFD700;
+}
+
 
 #hero-img {
 	background-image: url("../Assets/images/gallery/petcare_bg.png");
