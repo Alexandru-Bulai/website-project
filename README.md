@@ -11,10 +11,10 @@ This project aims to develop a comprehensive and responsive website for a Pet Ca
 
 ## Key Features
 
-- **Central GIF Animation**: A captivating central GIF animation that engages visitors, showcasing the lively and caring nature of the Pet Care company's services.
-- **Interactive Elements**: Utilizes JavaScript to add interactivity to the website, including dynamic content loading and interactive UI components.
-- **Tailwind CSS**: Employs Tailwind CSS for styling, taking advantage of its utility-first approach to build custom designs quickly without leaving the HTML.
-- **Accessibility and SEO**: Implements best practices for accessibility and SEO, ensuring the website is accessible to as wide an audience as possible and ranks well on search engines.
+1. **Central GIF Animation**: A captivating central GIF animation that engages visitors, showcasing the lively and caring nature of the Pet Care company's services.
+2. **Interactive Elements**: Utilizes JavaScript to add interactivity to the website, including dynamic content loading and interactive UI components.
+3. **Tailwind CSS**: Employs Tailwind CSS for styling, taking advantage of its utility-first approach to build custom designs quickly without leaving the HTML.
+4. **Accessibility and SEO**: Implements best practices for accessibility and SEO, ensuring the website is accessible to as wide an audience as possible and ranks well on search engines.
 
 ## Technologies Used
 
