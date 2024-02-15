@@ -2,7 +2,7 @@
 
 [![Super-Linter](https://github.com/<OWNER>/<REPOSITORY>/actions/workflows/<WORKFLOW_FILE_NAME>/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
-![Fluffy my Immagination](https://raw.githubusercontent.com/Alexandru-Bulai/website-project/main/fluffy-my-pillow.gif)
+![Fluffy my Immagination](https://github.com/Alexandru-Bulai/website-project/fluffy-my-pillow.gif)
 
 
 ## Project Overview
@@ -15,6 +15,8 @@ This project aims to develop a comprehensive and responsive website for a Pet Ca
 2. **Interactive Elements**: Utilizes JavaScript to add interactivity to the website, including dynamic content loading and interactive UI components.
 3. **Tailwind CSS**: Employs Tailwind CSS for styling, taking advantage of its utility-first approach to build custom designs quickly without leaving the HTML.
 4. **Accessibility and SEO**: Implements best practices for accessibility(`Accessibility score: 77`) and SEO (`SEO score: 92`), ensuring the website is accessible to as wide an audience as possible and ranks well on search engines.
+
+![Accessibility and SEO scores](https://github.com/Alexandru-Bulai/website-project/seo-accessibility.png "Accessibility and SEO scores")
 
 ## Technologies Used
 
