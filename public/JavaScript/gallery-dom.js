@@ -106,4 +106,4 @@ async function getPets (item) {
   })
 }
 
-module.exports = { displayGalleryItemsNum }
+module.exports = { displayGalleryItemsNum, getPets }
