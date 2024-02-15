@@ -11,9 +11,6 @@ This project aims to develop a comprehensive and responsive website for a Pet Ca
 
 ## Key Features
 
-- **Modern and Responsive Design**: The website features a modern design aesthetic with responsive layouts ensuring optimal viewing experience on desktops, tablets, and mobile devices.
-- **Navigation Menu**: A dynamic navigation menu that offers intuitive site navigation, enhancing user experience by allowing easy access to various sections of the website.
-- **Company Logo and Title Header**: Prominently displays the company's logo and title header at the top of the website, establishing brand identity and making a strong first impression.
 - **Central GIF Animation**: A captivating central GIF animation that engages visitors, showcasing the lively and caring nature of the Pet Care company's services.
 - **Interactive Elements**: Utilizes JavaScript to add interactivity to the website, including dynamic content loading and interactive UI components.
 - **Tailwind CSS**: Employs Tailwind CSS for styling, taking advantage of its utility-first approach to build custom designs quickly without leaving the HTML.
