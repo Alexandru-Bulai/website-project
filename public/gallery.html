@@ -10,10 +10,9 @@
 <link rel="stylesheet" href="CSS/gallery.css">
 <div id="hero-img">
 <!-- Menu beginning -->
-<div class="flex flex-col bg-indigo-100 my-8 md:flex-row max-m-xl rounded-xl md:rounded-full">
+<div class="flex flex-col bg-blue-300 my-8 md:flex-row max-m-xl rounded-xl md:rounded-full">
 	<div class="flex items-center justify-center">
-		<img class="w-6 h-6" src="Assets/images/gallery/black_heart_border.svg" alt="black heart">
-		<p class="text-xl font-extrabold text-indigo-400"><em>Gallery</em></p>
+		<p class="text-xl font-extrabold text-indigo-400 md:ml-2"><em>Gallery</em></p>
 	</div>
 
 <!-- Filters button -->
@@ -32,16 +31,16 @@
 			<button id="animalsFilterButton" class="p-2 rounded-full ring-4 text-xl font-bold text-blue-400 bg-blue-800 hover:text-white hover:bg-blue-300 md:ml-4 md:hidden">Animal</button>
 			<div id="single-animal-filter" class="hidden flex justify-center items-center md:flex">
 				<div class="flex justify-center">
-					<div data-type="dog" class="rounded-full mt-6 mx-4 p-2 ring-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="dog" class="rounded-full mt-6 mx-4 p-2 ring-4 ring-indigo-500 bg-indigo-500 transition duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-110 shadow-xl hover:shadow-2xl">
 						<img src="Assets/images/gallery/filter/dog.svg" alt="dog">
 					</div>
-					<div data-type="cat" class="rounded-full mt-6 mx-4 p-2 ring-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="cat" class="rounded-full mt-6 mx-4 p-2 ring-4 ring-purple-500 bg-purple-500 transition duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-110 shadow-xl hover:shadow-2xl">
 						<img src="Assets/images/gallery/filter/cat.svg" alt="cat">
 					</div>
-					<div data-type="fox" class="rounded-full mt-6 mx-4 p-2 ring-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="fox" class="rounded-full mt-6 mx-4 p-2 ring-4 ring-yellow-500 bg-yellow-500 transition duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-110 shadow-xl hover:shadow-2xl">
 						<img src="Assets/images/gallery/filter/fox.svg" alt="fox">
 					</div>
-					<div data-type="parrot" class="rounded-full mt-6 mx-4 p-2 ring-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 hover:shadow-lg">
+					<div data-type="parrot" class="rounded-full mt-6 mx-4 p-2 ring-4 ring-green-500 bg-green-500 transition duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-110 shadow-xl hover:shadow-2xl">
 						<img src="Assets/images/gallery/filter/parrot.svg" alt="parrot">
 					</div>
 				</div>
@@ -49,19 +48,19 @@
 		</div>
 
 <!-- Gender filter option -->
-		<div class="flex justify-center mb-4 mt-2">
-			<form class="flex md:flex-col lg:flex-row">
-				<label class="md:hidden lg:block"><strong><em>Gender:</em></strong></label>
-				<div class="flex">
-					<label class="mx-2" for="male">M</label>
-					<input type="radio" name="gender" id="male" value="male">
-				</div>
-				<div class="flex">
-					<label class="mx-2" for="female">F</label>
-					<input type="radio" name="gender" id="female" value="female">
-				</div>
-			</form>
+<div class="flex justify-center mb-4 mt-2">
+	<form class="flex items-center md:flex-col lg:flex-row">
+		<label class="md:hidden lg:block font-bold"><em>Gender:</em></label>
+		<div class="flex items-center mx-4 my-2">
+			<input type="radio" name="gender" id="male" value="male" class="hidden peer"/>
+			<label for="male" class="cursor-pointer peer-checked:bg-black peer-checked:text-white p-2 rounded-full transition-all duration-300 ease-in-out ring-2 ring-black hover:ring-black focus:outline-none focus:ring-4 focus:ring-black">M</label>
 		</div>
+		<div class="flex items-center mx-4 my-2">
+			<input type="radio" name="gender" id="female" value="female" class="hidden peer"/>
+			<label for="female" class="cursor-pointer peer-checked:bg-pink-500 peer-checked:text-white p-3 rounded-full transition-all duration-300 ease-in-out ring-2 ring-pink-300 hover:ring-pink-500 focus:outline-none focus:ring-4 focus:ring-pink-500">F</label>
+		</div>
+	</form>
+</div>
 
 <!-- Rating filters option -->
 		<div class="md:flex">
@@ -105,7 +104,6 @@
 
 <!-- Gallery section -->
 	<div class="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="img-container">
-
 	</div>
 </div>
 <!-- Images gallery container end -->
