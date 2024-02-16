@@ -68,8 +68,6 @@ if (typeof document !== 'undefined') {
         radio.checked = false
       })
     }
-
-    displayGalleryItemsNum('.gallery-items')
     getPets('#img-container')
   })
 }
@@ -104,6 +102,6 @@ async function getPets (item) {
             </div></div>\n
             `)
   })
+  displayGalleryItemsNum('.gallery-items')
 }
-
 module.exports = { displayGalleryItemsNum, getPets }
